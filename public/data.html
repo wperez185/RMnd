@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href=" ../css/main.css">
+  <title>RMnd</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+     <div class="topnav" id="myTopnav">
+    <a href="../index.html">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</nav>
+<a href="/profile"><button class="button button5">Settings</button></a>
+  <!-- <div class="page container"> -->
+    <!-- page container start-->
+    <!-- <div class="col-3 float-left" role="navigation"> -->
+      <!--col-3 float-left navigation start -->
+      <!-- <nav class="menu"> -->
+        <!-- <h3 class="menu-header">{{User.username}} settings</h3> -->
+        <!-- menu items start -->
+        <!-- <ul class ="left-menu"> -->
+         <!-- <li> -->
+           <!-- <a href="../settings/profile.html" class="js-selected-navigation-item selected menu-item" data-selected-links="avatar_settings /settings/profile">Profile</a> -->
+         <!-- </li> -->
+         <!-- <li> -->
+           <!-- <a href="../settings/admin.html" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/admin">Account</a> -->
+         <!-- </li> -->
+       <!-- </ul> -->
+        <!-- menu items end -->
+      <!-- </nav> -->
+
+    <!-- </div> -->
+    <!--col-3 float-left navigation end -->
+
+    <!-- <div class="col-9 float-left">
+      <div class="Subhead">
+        <h2 class="Subhead-heading">User profile</h2>
+      </div> -->
+
+      <!-- form -->
+      <!-- TODO: Change names on ul and li classes -->
+      <form accept-charset="UTF-8" action="/users" class="columns uploadable-container" id="data" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
+        <div class="column two-thirds">
+          <ul class="job-post" id="job-list">
+      <li>
+        <span class="job-post">Job posting info goes here</span>
+        <div class="job-post-controls">
+          <button class="job-post-toggle">
+            <input id="checkBox" type="checkbox">
+          </button>
+          <button class="job-post-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>
+      <li>
+        <span class="job-post">Job posting info goes here</span>
+        <div class="job-post-controls">
+          <button class="job-post-toggle">
+            <input id="checkBox" type="checkbox">
+          </button>
+          <button class="job-post-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>
+      <li>
+        <span class="job-post job-post__checked">Job posting info goes here</span>
+        <div class="job-post-controls">
+          <button class="job-post-toggle">
+            <input id="checkBox" type="checkbox">
+          </button>
+          <button class="job-post-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>
+      <li>
+        <span class="job-post">Job posting info goes here</span>
+        <div class="job-post-controls">
+          <button class="job-post-toggle">
+            <input id="checkBox" type="checkbox">
+          </button>
+          <button class="job-post-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+        </div>
+      </form>
+
+
+
+
+    <!-- </div> -->
+    <!-- col-9 float-left end -->
+  </div>
+  <!-- page container end-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="js/jobSearch.js"></script>
+</body>
+
+</html>

@@ -5,15 +5,21 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const http = require('http');
 const passport = require('passport');
-
+const jobSearchRouter = require('./server/routes/jobSearchRouter');
+const usersRouter = require('./server/routes/usersRouter');
+const jobsAppliedRouter = require('./server/routes/jobsAppliedRouter');
+const index = require("./server/routes/index");
+const path = require("path");
 // const {router: usersRouter} = require('./users');
 // const {router: authRouter, basicStrategy, jwtStrategy} = require('./auth');
 
 mongoose.Promise = global.Promise;
 
+
 const {PORT, DATABASE_URL} = require('./config');
 
 const app = express();
+app.use(express.static(path.join(__dirname, "/public/assets")));
 
 // Logging
 app.use(morgan('common'));
@@ -33,8 +39,12 @@ app.use(passport.initialize());
 // passport.use(basicStrategy);
 // passport.use(jwtStrategy);
 
-// app.use('/api/users/', usersRouter);
+app.use('/api/jobSearch', jobSearchRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/jobsApplied', jobsAppliedRouter);
+app.use('/', index);
 // app.use('/api/auth/', authRouter);
+
 
 // A protected endpoint which needs a valid JWT to access it
 app.get('/api/github',(req, res) => {

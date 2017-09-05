@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href=" ./css/main.css">
+  <title>RMnd</title>
+</head>
+
+<body>
+  <!-- <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div> -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="topnav" id="myTopnav">
+      <a href="#home">Home</a>
+      <a href="/hire">Employer Job Postings</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </nav>
+  <!-- </div> -->
+  <div class="container-fluid">
+    <h1>Post a Job</h1>
+    <hr>
+    <div class="main">
+      <p>Information About the Job</p>
+      <hr>
+      <!-- <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p> -->
+      <form id="employer-posting">
+        <ul id="job-post" id="job-list">
+          <li>
+            <span class="job-post">Company Name</span>
+            <div class="job-post-controls">
+              <input id="company-name" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">Job Title</span>
+            <div class="job-post-controls">
+              <input id="job-title" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">Job Description</span>
+            <div class="job-post-controls">
+              <input id="job-description" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">City</span>
+            <div class="job-post-controls">
+              <input id="city" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">State</span>
+            <div class="job-post-controls">
+              <input id="state" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">Zipcode</span>
+            <div class="job-post-controls">
+              <input id="zipcode" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">Salary</span>
+            <div class="job-post-controls">
+              <input id="salary" type="text">
+            </div>
+          </li>
+          <li>
+            <span class="job-post">What type of job is it?</span>
+            <div class="job-post-controls">
+              <!-- <button class="job-post-toggle"> -->
+              <!-- <input id="checkBox" type="checkbox"> -->
+              <!-- </button> -->
+              <button class="full-time">
+        <span class="button-label">Full-time</span>
+      </button>
+              <button class="part-time">
+  <span class="button-label">Part-time</span>
+</button>
+              <button class="internship">
+<span class="button-label">Internship</span>
+</button>
+              <button class="contract">
+<span class="button-label">Contract</span>
+</button>
+              <button class="temp">
+<span class="button-label">Temporary</span>
+</button>
+            </div>
+          </li>
+          <p><button type="submit" class="btn btn-primary">Submit</button></p>
+        </ul>
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="js/employerPost.js"></script>
+  <script src="js/jobSearch.js"></script>
+</body>
+
+</html>
