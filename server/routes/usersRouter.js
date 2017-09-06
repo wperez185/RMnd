@@ -141,6 +141,16 @@ router.get('/', (req, res) => {
     .catch(err => res.status(500).json({message: 'Internal server error'}));
 });
 
+router.get('/:userId', (req, res) => {
+  let userId = req.params.userId
+  return User
+    .findById(userId)
+    .then(users => res.json(users.apiRepr()))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({message: 'Internal server error'})});
+});
+
 router.put('/:id', jsonParser, (req, res) => {
   const requiredFields = ['id'];
   for (let i = 0; i < requiredFields.length; i++) {

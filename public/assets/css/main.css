@@ -39,6 +39,9 @@ p {
 ul {
   list-style: none;
 }
+.click-button {
+  background-color: red;
+}
 .main {
     border: 1px solid #eaeaea;
     background: #eaeaea;

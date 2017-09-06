@@ -9,7 +9,7 @@ function button() {
       "Access-Control-Allow-Origin": "*"
     },
     success: function(data) {
-      console.log(data);
+      // console.log(data);
       const  jobList = $("#job-list");
       jobList.html(" ");
       data.forEach(function (job) {

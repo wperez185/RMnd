@@ -8,6 +8,7 @@ const jobPostsSchema = mongoose.Schema({
   state: {type: String, required: true},
   zipcode: {type: Number, required: true},
   salary: {type: Number, required: true},
+  jobType: {type: String, required: true},
   postedDate: {type: Date}
 });
 

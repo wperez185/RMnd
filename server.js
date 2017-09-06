@@ -7,6 +7,7 @@ const http = require('http');
 const passport = require('passport');
 const jobSearchRouter = require('./server/routes/jobSearchRouter');
 const usersRouter = require('./server/routes/usersRouter');
+const contactRouter = require('./server/routes/contactRouter');
 const jobsAppliedRouter = require('./server/routes/jobsAppliedRouter');
 const index = require("./server/routes/index");
 const path = require("path");
@@ -41,6 +42,7 @@ app.use(passport.initialize());
 
 app.use('/api/jobSearch', jobSearchRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/contact', contactRouter);
 app.use('/api/jobsApplied', jobsAppliedRouter);
 app.use('/', index);
 // app.use('/api/auth/', authRouter);

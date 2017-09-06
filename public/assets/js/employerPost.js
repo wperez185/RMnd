@@ -1,6 +1,7 @@
 $(function(){
   $("#employer-posting").submit(function(event) {
     event.preventDefault();
+  const jobType = $(".click-button").attr("id");
   const companyName = $("#company-name").val();
   const jobTitle = $("#job-title").val();
   const jobDescription = $("#job-description").val();
@@ -9,6 +10,11 @@ $(function(){
   const city = $("#city").val();
   const state = $("#state").val();
   const zipcode = $("#zipcode").val();
+  // const fullTime = $(".full-time").val();
+  // const partTime = $(".part-time").val();
+  // const internship = $(".internship").val();
+  // const contract = $(".contract").val();
+  // const temporary = $(".temporary").val();
   let obj = {
     company: companyName,
     jobTitle: jobTitle,
@@ -17,7 +23,8 @@ $(function(){
     salary: salary,
     city: city,
     state: state,
-    zipcode: zipcode
+    zipcode: zipcode,
+    jobType: jobType
   };
   console.log(JSON.stringify(obj));
   // return false;
@@ -39,4 +46,10 @@ $(function(){
     }
   })
   });
+  $(".button-label").click(function(event){
+    event.preventDefault();
+    $(".button-label").removeClass("click-button");
+    $(this).addClass("click-button");
+
+  })
 });

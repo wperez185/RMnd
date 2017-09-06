@@ -79,6 +79,7 @@ router.post("/", jsonParser, (req, res) => {
     state: req.body.state,
     zipcode: req.body.zipcode,
     salary: req.body.salary,
+    jobType: req.body.jobType,
     postedDate: createdDate})
     .then(results => {
         res.status(201).json(results);
