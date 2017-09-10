@@ -1,10 +1,13 @@
+/*Fonts used for H1 "Cinzel"
+Fonts used for all other elements "Fauna One"*/
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background: ##e1e2e4;
-  font-family: 'Lato', sans-serif;
+  Font-Family: 'Fauna One', Serif;
 }
 
 a {
@@ -21,7 +24,7 @@ hr {
 }
 
 h1 {
-  font-size: 1.5rem;
+  Font-Family: 'Cinzel', Cursive;
 }
 
 hr {
@@ -45,6 +48,9 @@ ul {
 
 .click-button {
   background-color: red;
+}
+.hide {
+  display: none;
 }
 
 .btn-primary {
@@ -172,7 +178,7 @@ img.logo {
   font-weight: 700;
   padding-bottom: 15px;
   position: relative;
-  right: 15px;
+  /*right: 15px;*/
   margin-top: 50px;
   text-align: center;
 }
@@ -1058,7 +1064,7 @@ img.logo {
   width: 75px;
 }
 .main h1 {
-  font-size: 35px;
+  font-size: 32px;
 }
 p {
   font-size: 18px;
@@ -1101,12 +1107,169 @@ div#signInBox {
 /*// Large devices (desktops, 992px and up)*/
 
 @media (min-width: 769px) and (max-width : 920px) {
-  body {
-    background-color: red;
+.mainPicture {
+  height: 360px;
   }
+.main h1 {
+  font-size: 35px;
+  }
+p {
+  font-size: 18px;
+  text-align: center;
+  }
+.jobs-main {
+  font-size: 23px;
+  text-align: left;
+}
+.bottom-logo {
+  height: 125px;
+  width: 165px;
+}
+.panel {
+  height: 600px;
+}
+.panel__wrap {
+    width: 100%;
+  }
+.panel__menu li {
+  font-size: 20px;
+}
+.panel__box label {
+  font-size: 16px;
+}
+div#signInBox {
+  width: 300px;
+  position: relative;
+  left: 44px;
+}
+div#signUpBox {
+  width: 330px;
+}
 }
 
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 
-@media (min-width: 1200px) {}
+@media (min-width: 921px) and (max-width : 1200px) {
+.hide {
+  display: inline-block;
+}
+.mainPicture {
+  height: 600px;
+  opacity: 0.6;
+}
+.main {
+  margin-top: 5px;
+}
+.main h1 {
+    font-size: 44px;
+    position: relative;
+    bottom: 355px;
+    left: 35px;
+    color: #fff;
+}
+.text {
+    position: relative;
+    left: 260px;
+    bottom: 370px;
+    font-size: 20px;
+}
+form#searchForm {
+  position: relative;
+  bottom: 365px;
+  left: 270px;
+}
+input#mySearch {
+  height: 40px;
+  font-size: 18px;
+  opacity: 0.7;
+  padding-left: 5px;
+}
+.jobs-main {
+  position: relative;
+  bottom: 200px;
+  font-size: 20px;
+}
+ul.job-post {
+  left: 18px;
+}
+.panel {
+  height: 700px;
+}
+.bottom-logo {
+    height: 200px;
+    width: 250px;
+}
+div#signInBox {
+  left: 130px;
+}
+div#signUpBox {
+  right: 175px;
+}
+}
+
+@media (min-width: 1201px)  {
+  .hide {
+    display: inline-block;
+  }
+  .mainPicture {
+    height: 600px;
+    opacity: 0.6;
+  }
+  .main {
+    margin-top: 5px;
+  }
+  .main h1 {
+      font-size: 44px;
+      position: relative;
+      bottom: 355px;
+      left: 35px;
+      color: #fff;
+  }
+  .text {
+      position: relative;
+      left: 485px;
+      bottom: 370px;
+      font-size: 20px;
+  }
+  form#searchForm {
+    position: relative;
+    bottom: 365px;
+    left: 270px;
+  }
+  input#mySearch {
+    height: 40px;
+    font-size: 18px;
+    opacity: 0.7;
+    padding-left: 5px;
+  }
+  .jobs-main {
+    position: relative;
+    bottom: 200px;
+    font-size: 20px;
+  }
+  ul.job-post {
+    left: 18px;
+  }
+  .panel {
+    height: 700px;
+  }
+  .panel__menu li {
+    font-size: 23px;
+  }
+  .panel__box label {
+    font-size: 17px;
+  }
+  .bottom-logo {
+      height: 200px;
+      width: 250px;
+  }
+  div#signInBox {
+    left: 400px;
+    width: 300px;
+  }
+  div#signUpBox {
+    right: 350px;
+    width: 390px
+  }
+}

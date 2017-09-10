@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Fauna+One" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href=" ./css/main.css">
   <title>RMnd</title>
@@ -30,10 +31,20 @@
   </nav>
   <!-- </div> -->
   <div class="container-fluid">
+    <img src="./img/mainPicture.jpg" class="mainPicture" alt="Main Picture">
     <div class="main">
-      <img src="./img/mainPicture.jpg" class="mainPicture" alt="Main Picture">
+      <!-- <div class="text">  Wanted to wrap to use opacity on text -->
+      <!-- <img src="./img/mainPicture.jpg" class="mainPicture" alt="Main Picture"> -->
       <h1> Find Your Future</h1>
-      <p> We will help you find the job perfect for you</p>
+      <p class="text"> We will help you find the job perfect for you</p>
+      <form id="searchForm" class="hide">
+  <div>
+    <input type="search" id="mySearch" value="Job title">
+    <input type="search2" id="mySearch" value="Location">
+    <button>Search</button>
+  </div>
+</form>
+      <!-- </div> -->
       <p class="jobs-main">Recommended Jobs</p>
       <ul class="job-post" id="job-list">
       </ul>
