@@ -6,7 +6,7 @@ Fonts used for all other elements "Fauna One"*/
 }
 
 body {
-  background: ##e1e2e4;
+  background: #fff;
   Font-Family: 'Fauna One', Serif;
 }
 
@@ -28,12 +28,17 @@ h1 {
 }
 
 hr {
-  width: 80%;
+  width: 99%;
+  opacity: 0.6;
+  margin-top: 0;
 }
 
 input {
   margin-bottom: 10px;
   border: 1px solid #ececec;
+}
+nav {
+  background-color: #fff;
 }
 
 p {
@@ -44,6 +49,13 @@ p {
 
 ul {
   list-style: none;
+}
+
+.nav {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .click-button {
@@ -71,13 +83,21 @@ ul {
 /********************************************************************************************/
 
 img.logo {
-  width: 58px;
-  height: 54px;
-  opacity: 0.9;
+  width: 140px;
+  height: 130px;
 }
-.bottom-logo {
-  height: 70px;
-  width: 70px;
+.career {
+    width: 450px;
+}
+.resume {
+  width: 450px;
+}
+
+#career-advice {
+  float: left;
+}
+#resume-help {
+  float: right;
 }
 
 
@@ -167,8 +187,8 @@ img.logo {
 /********************************************************************************************/
 
 .main {
-  border: 1px solid #eaeaea;
-  background: #eaeaea;
+  /*border: 1px solid #fff;
+  background: #eaeaea;*/
   margin-top: 40px;
   width: 100%;
 }
@@ -208,6 +228,7 @@ img.logo {
 
 .text {
   text-align: center;
+  color: #fff;
 }
 
 .container {
@@ -1301,7 +1322,7 @@ div#signUpBox {
 
 @media only screen and (min-width : 769px) and (max-width : 920px) {
   body {
-    background-color: #eaeaea;
+    background-color: #fff;
   }
   .data-button {
     display: none;
@@ -1346,7 +1367,7 @@ div#signUpBox {
 
 @media (min-width: 921px) and (max-width : 1200px) {
   body {
-    background-color: #eaeaea;
+    background-color: #fff;
   }
   .data-button {
     display: none;
@@ -1395,7 +1416,7 @@ h1.data-h1 {
 
 @media (min-width: 1201px) {
   body {
-    background-color: #eaeaea;
+    background-color: #fff;
   }
   .data-button {
     display: none;
