@@ -10,18 +10,22 @@ function button() {
     },
     success: function(data) {
       // console.log(data);
-      const  jobList = $("#job-list");
+      const jobList = $("#job-list");
       jobList.html(" ");
       data.forEach(function (job) {
-        // put this into a var
           $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + job.salary + "</span>" +
            "<span>" +
           job.postedDate + "</span>" + "</li>" + "<hr>");
+          const salary = $(".salary").append("<li>" + job.salary + "</li>");
+          const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
+          const location = $(".location").append("<li>" + job.state + "</li>");
+          const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
       });
     },
     error: function(err) {
       console.log(err);
     }
+
 
 
   })

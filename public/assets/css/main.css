@@ -191,6 +191,9 @@ img.logo {
   font-size: 18px;
   font-weight: 500;
 }
+.data-main {
+  margin-top: 65px;
+}
 
 
 /*text-align: center;
@@ -202,6 +205,10 @@ img.logo {
 }
 
 /*Check if needed*/
+
+.text {
+  text-align: center;
+}
 
 .container {
   margin: 0;
@@ -1000,16 +1007,16 @@ ul.job-post {
   margin-bottom: 15px;
 }
 
-ul.job-post2 {
-  top: 70px;
+ul.data-post {
+  margin-top: 70px;
   width: 90%;
-  position: relative;
   list-style: none;
-  left: 40px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: whitesmoke;
 }
 
-.job-post2 li {
+.data-post li {
   margin-bottom: 15px;
 }
 
@@ -1031,6 +1038,8 @@ ul.job-post2 {
   float: right;
   cursor: pointer;
   background-color: #555555;
+  position: relative;
+  left: 6px;
 }
 
 
@@ -1038,6 +1047,7 @@ ul.job-post2 {
 
 
                                         /*Media Queries*/
+
 
 
 /********************************************************************************************/
@@ -1154,6 +1164,9 @@ div#signUpBox {
 .hide {
   display: inline-block;
 }
+.button {
+  display: none;
+}
 .mainPicture {
   height: 600px;
   opacity: 0.6;
@@ -1170,7 +1183,7 @@ div#signUpBox {
 }
 .text {
     position: relative;
-    left: 260px;
+    /*left: 260px;*/
     bottom: 370px;
     font-size: 20px;
 }
@@ -1212,6 +1225,9 @@ div#signUpBox {
   .hide {
     display: inline-block;
   }
+  .button {
+    display: none;
+  }
   .mainPicture {
     height: 600px;
     opacity: 0.6;
@@ -1228,7 +1244,7 @@ div#signUpBox {
   }
   .text {
       position: relative;
-      left: 485px;
+      /*left: 485px;*/
       bottom: 370px;
       font-size: 20px;
   }
@@ -1272,4 +1288,156 @@ div#signUpBox {
     right: 350px;
     width: 390px
   }
+}
+
+/********************************************************************************************/
+
+
+                                        /*Media Queries*/
+                                        /*User Data Page*/
+
+
+/********************************************************************************************/
+
+@media only screen and (min-width : 769px) and (max-width : 920px) {
+  body {
+    background-color: #eaeaea;
+  }
+  .data-button {
+    display: none;
+  }
+  .hide {
+    display: inline-block;
+  }
+  .data-main {
+    margin-top: 10px;
+    width: 60%;
+    float: right;
+}
+.left {
+    float: left;
+    margin-top: 125px;
+}
+.salary-p {
+    margin: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobTitle-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.location-p {
+    margin: 0;
+    width: 35%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobType-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
+}
+
+@media (min-width: 921px) and (max-width : 1200px) {
+  body {
+    background-color: #eaeaea;
+  }
+  .data-button {
+    display: none;
+  }
+  .hide {
+    display: inline-block;
+  }
+  .data-main {
+    margin-top: 10px;
+    width: 75%;
+    float: right;
+}
+h1.data-h1 {
+  color: #000;
+  bottom: 0;
+}
+.left {
+    float: left;
+    margin-top: 125px;
+}
+.salary-p {
+    margin: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobTitle-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.location-p {
+    margin: 0;
+    width: 35%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobType-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
+}
+
+@media (min-width: 1201px) {
+  body {
+    background-color: #eaeaea;
+  }
+  .data-button {
+    display: none;
+  }
+  .hide {
+    display: inline-block;
+  }
+  .data-main {
+    margin-top: 10px;
+    width: 75%;
+    float: right;
+}
+h1.data-h1 {
+  color: #000;
+  bottom: 0;
+}
+.left {
+    float: left;
+    margin-top: 125px;
+}
+.salary-p {
+    margin: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobTitle-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.location-p {
+    margin: 0;
+    width: 35%;
+    font-weight: 700;
+    font-size: 18px;
+}
+.jobType-p {
+    margin: 0;
+    width: 55%;
+    font-weight: 700;
+    font-size: 18px;
+}
 }
