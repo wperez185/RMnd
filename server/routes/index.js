@@ -18,6 +18,14 @@ router.get("/account", (req, res) => {
   res.sendFile(path.join(__dirname, "../..", "public/settings/admin.html"))
 })
 
+router.get("/signup", (req, res) => {
+  res.sendFile(path.join(__dirname, "../..", "public/settings/signup.html"))
+})
+
+router.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "../..", "public/settings/login.html"))
+})
+
 router.get("/hire", (req, res) => {
   res.sendFile(path.join(__dirname, "../..", "public/employers/employerPosting.html"))
 })

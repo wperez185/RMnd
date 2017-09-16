@@ -17,23 +17,38 @@
       <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
   </div> -->
-  <nav class="navbar navbar-dark bg-primary">
-    <div class="topnav" id="myTopnav">
-      <a href="/">Home</a>
-      <a href="/hire">Employer Job Postings</a>
-      <a href="/contact">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
-  </nav>
+  <img src="./img/logo3.JPG" class="logo" alt="RMnd logo">
+  <hr>
+  <div class="topnav" id="myTopnav">
+  <a href="/">Home</a>
+  <a href="/jobPosts">Find Jobs</a>
+  <a href="#contact">Career Resources</a>
+  <a href="#about">Post a Resume</a>
+  <a href="#about">Company Profiles</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
   <!-- </div> -->
-  <div class="container-fluid">
-    <h1>Post a Job</h1>
-    <hr>
+
+  <header class="job-img">
+    <div class="job-background"></div>
+    <div class="header-content">
+      <h1>Find Your Future</h1>
+      <p class="job-text">We will help you find the job perfect for you</p>
+    </div>
+  </header>
+
+
+  <!-- <div class="job-img"> -->
+  <!-- <img src="./img/post-job.jpg" class="post-job" alt="RMnd Post Job Image"> -->
+  <!-- <h1 class="job-main">Find The Right Person</h1>
+  <p class="job-text">We will help you find the perfect person for your company</p>
+  </div> -->
+  <div class="employer container-fluid">
+    <!-- <h1>Post a Job</h1> -->
+    <!-- <hr> -->
     <div class="main">
-      <p>Information About the Job</p>
-      <hr>
-      <!-- <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p> -->
       <form id="employer-posting">
+        <p class="form-p">Tell us what you are looking for</p>
         <ul id="job-post" id="job-list">
           <li>
             <span class="job-post">Company Name</span>
@@ -100,17 +115,12 @@
 </button>
             </div>
           </li>
-          <p><button type="submit" class="btn btn-primary">Submit</button></p>
+          <button type="submit" class="post-job-btn">Post Job</button>
         </ul>
       </form>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/employerPost.js"></script>
     <script src="js/nav.js"></script>

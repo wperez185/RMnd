@@ -57,22 +57,9 @@ ul {
   font-size: 15px;
   font-weight: 600;
 }
-
-.click-button {
-  background-color: red;
-}
 .hide {
   display: none;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  position: relative;
-  right: 25px;
-}
-
 
 /********************************************************************************************/
 
@@ -1320,7 +1307,7 @@ h1.data-h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/mainPicture.jpg');
+  background-image: url('/img/post-job.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.6;
@@ -1443,13 +1430,6 @@ h1.data-h1 {
             /*Join Now*/
 /* ------------------------------ */
 
-/*@media (min-width : 480px) and (max-width : 575px)
-@media (min-width: 576px) and (max-width : 640px)
-@media (min-width: 641px) and (max-width : 768px)
-@media (min-width: 769px) and (max-width : 920px)
-@media (min-width: 921px) and (max-width : 1200px)
-@media (min-width: 1201px)*/
-
 .join-now {
   clear: both;
   text-align: center;
@@ -1467,7 +1447,7 @@ h1.data-h1 {
     margin: 0 auto;
     padding: 10px;
     font-size: 16px;
-    background: #2c2b2b;
+    background: #333;
     color: white;
 }
 
@@ -1484,7 +1464,6 @@ h1.data-h1 {
 
 
 /********************************************************************************************/
-
 
 /* Add a black background color to the top navigation */
 
@@ -1552,6 +1531,243 @@ h1.data-h1 {
     padding: 10px 10px;
 }
 }
+
+/********************************************************************************************/
+
+
+                                         /*Employer Post Job*/
+
+
+/********************************************************************************************/
+
+/* This `header` element wraps background image + heading content. */
+.job-img {
+  position: relative;
+  text-align: center;
+}
+
+/* The header background class is just an empty `div` that makes it easier to control
+ * the position and opacity of image than a normal `img` tag would.
+ */
+.job-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280%;
+  background-image: url('/img/post-job.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  margin-top: 40px;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  top: 125px;
+  color: white;
+}
+.header-content h1 {
+  font-size: 30px;
+}
+
+.employer {
+    margin-top: 200px;
+}
+#employer-posting {
+    border: 2px solid #494848;
+}
+.form-p {
+    padding-left: 20px;
+    font-size: 16px;
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+.button-label {
+    margin: 5px;
+    display: inline-block;
+}
+.click-button {
+  background-color: #000;
+  color: #fff;
+}
+
+/*change color*/
+.post-job-btn {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  position: relative;
+  right: 25px;
+  margin-top: 5px;
+}
+
+@media (min-width : 480px) and (max-width : 575px) {
+  #employer-posting {
+    width: 101%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .job-background {
+    height: 300px;
+  }
+  .employer {
+    margin-top: 320px;
+  }
+  .header-content {
+    top: 215px;
+  }
+}
+
+@media (min-width : 576px) and (max-width : 640px) {
+#employer-posting {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.job-background {
+  height: 300px;
+}
+.employer {
+  margin-top: 340px;
+}
+.header-content {
+  top: 230px;
+}
+}
+
+@media (min-width : 641px) and (max-width : 768px) {
+  #employer-posting {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-content h1 {
+    font-size: 35px;
+}
+.job-text {
+  font-size: 18px;
+}
+  .job-background {
+    height: 350px;
+  }
+  .employer {
+    margin-top: 380px;
+  }
+  .header-content {
+    top: 230px;
+  }
+  .form-p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width : 920px){
+  #employer-posting {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .job-background {
+    height: 375px;
+  }
+  .employer {
+    margin-top: 400px;
+  }
+  .header-content {
+    top: 230px;
+  }
+  .header-content h1 {
+    font-size: 40px;
+}
+.job-text {
+  font-size: 20px;
+}
+.form-p {
+  font-size: 18px;
+}
+}
+@media (min-width: 921px) and (max-width : 1200px){
+  #employer-posting {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .job-background {
+    height: 500px;
+  }
+  .employer {
+    margin-top: 520px;
+  }
+  .header-content {
+    top: 320px;
+  }
+  .header-content h1 {
+    font-size: 48px;
+  }
+  .job-text {
+  font-size: 22px;
+  }
+  .form-p {
+  font-size: 20px;
+  }
+}
+@media (min-width: 1201px) {
+  .job-background {
+    height: 650px;
+  }
+    #employer-posting {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+    .job-background {
+      height: 500px;
+    }
+    .employer {
+      margin-top: 520px;
+    }
+    .header-content {
+      top: 320px;
+    }
+    .header-content h1 {
+      font-size: 48px;
+    }
+    .job-text {
+    font-size: 22px;
+    }
+    .form-p {
+    font-size: 20px;
+    }
+  }
+
+  /********************************************************************************************/
+
+
+                                           /*Profile Page*/
+
+
+  /********************************************************************************************/
+
+  /*@media (min-width : 480px) and (max-width : 575px)
+  @media (min-width: 576px) and (max-width : 640px)
+  @media (min-width: 641px) and (max-width : 768px)
+  @media (min-width: 769px) and (max-width : 920px)
+  @media (min-width: 921px) and (max-width : 1200px)
+  @media (min-width: 1201px)*/
+
+.page {
+  background-color: #e7e7e7;
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* ------------------------------ */
 /* Search Form */
