@@ -1047,9 +1047,10 @@ h1.data-h1 {
 }
 
 #career-advice {
-
+    margin-top: 5px;
 }
 #resume-help {
+      margin-top: 5px;
 }
 @media (min-width: 576px) and (max-width : 640px){
   .content {
@@ -1817,13 +1818,6 @@ ul.data-post {
   position: relative;
   left: 6px;
 }*/
-/******************TEST**********************************/
-/*@media (min-width : 480px) and (max-width : 575px)
-@media (min-width: 576px) and (max-width : 640px)
-@media (min-width: 641px) and (max-width : 768px)
-@media (min-width: 769px) and (max-width : 920px)
-@media (min-width: 921px) and (max-width : 1200px)
-@media (min-width: 1201px)*/
 
 .hide {
   display: none;
@@ -2135,7 +2129,17 @@ fieldset {
 
 
 /********************************************************************************************/
+/*@media (min-width : 480px) and (max-width : 575px)
+@media (min-width: 576px) and (max-width : 640px)
+@media (min-width: 641px) and (max-width : 768px)
+@media (min-width: 769px) and (max-width : 920px)
+@media (min-width: 921px) and (max-width : 1200px)
+@media (min-width: 1201px)*/
 
+.goal-img {
+    width: 100%;
+    height: 200px;
+}
 .about-page {
   background: #ebebea;
 }
@@ -2144,10 +2148,10 @@ fieldset {
   margin: 0 auto;
   position: relative;
   background: #fff;
-  margin-top: 60px;
+  margin-top: 10px;
   padding: 25px;
 }
-.goal-header, .about-header {
+.goal-header, .about-header, .about-p, .goal {
     text-align: center;
 }
 
@@ -2155,6 +2159,32 @@ fieldset {
   background: #fff;
   padding: 25px;
   margin: 50px 0;
+}
+
+@media (min-width: 576px) and (max-width : 640px){
+  .goal-img {
+      height: 250px;
+  }
+}
+@media (min-width: 641px) and (max-width : 768px){
+  .goal-img {
+      height: 300px;
+  }
+}
+@media (min-width: 769px) and (max-width : 920px){
+  .goal-img {
+      height: 350px;
+  }
+}
+@media (min-width: 921px) and (max-width : 1200px) {
+  .goal-img {
+      height: 400px;
+  }
+}
+@media (min-width: 1201px) {
+  .goal-img {
+      height: 450px;
+  }
 }
 /* ------------------------------ */
 /* Search Form */
