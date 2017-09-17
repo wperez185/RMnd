@@ -1806,7 +1806,7 @@ width: 60%;
       margin-left: 130px;
   }
   .update-btn {
-    right: 113px;
+    right: 93px;
   }
   .form-control {
     width: 70%;
@@ -1815,7 +1815,7 @@ width: 60%;
 
 @media (min-width: 921px) and (max-width : 1200px) {
   .profile-menu {
-  width: 90%;
+  width: 115%;
 }
   .profile-left {
       margin-left: 130px;
@@ -1926,12 +1926,7 @@ div {
   border-bottom: 1px solid #e1e4e8;
 }
 
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.Subhead {
+.subhead {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -1967,9 +1962,6 @@ dl {
   list-style: none;
 }
 
-div {
-  display: block;
-}
 
 /* ------------------------------ */
 /* Search Form */

@@ -4,88 +4,91 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href=" ../css/main.css">
   <title>RMnd</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary">
-     <div class="topnav" id="myTopnav">
-    <a href="/">Home</a>
-    <a href="/contact">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <img src="./img/logo3.JPG" class="logo" alt="RMnd logo">
+  <hr>
+  <div class="topnav" id="myTopnav">
+  <a href="#home">Home</a>
+  <a href="/jobPosts">Find Jobs</a>
+  <a href="#contact">Career Resources</a>
+  <a href="#about">Post a Resume</a>
+  <a href="#about">Company Profiles</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="page-content container-fluid clearfix">
+  <!-- page container start-->
+
+  <div class="col-3 float-left hide" role="navigation">
+    <!--col-3 float-left navigation start -->
+    <nav class="menu">
+      <h3 class="menu-header">{{User.username}} settings</h3>
+      <!-- menu items start -->
+      <ul class="left-menu">
+        <li>
+          <a href="/profile" class="js-selected-navigation-item menu-item">Profile</a>
+        </li>
+        <li>
+          <a href="/account" class="js-selected-navigation-item selected menu-item" data-selected-links=" /account">Account</a>
+        </li>
+      </ul>
+      <!-- menu items end -->
+    </nav>
   </div>
-</nav>
-  <div class="page-content container-fluid clearfix">
-    <!-- page container start-->
+  <!-- col-3 float-left end -->
 
-    <div class="col-3 float-left" role="navigation">
-      <!--col-3 float-left navigation start -->
-      <nav class="menu">
-        <h3 class="menu-header">{{User.username}} settings</h3>
-        <!-- menu items start -->
-        <ul class="left-menu">
-          <li>
-            <a href="/profile" class="js-selected-navigation-item menu-item">Profile</a>
-          </li>
-          <li>
-            <a href="/account" class="js-selected-navigation-item selected menu-item" data-selected-links=" /account">Account</a>
-          </li>
-        </ul>
-        <!-- menu items end -->
-      </nav>
+
+
+
+  <div class="col-9 float-left">
+    <div class="subhead">
+      <h2 class="subhead-heading">Change password</h2>
     </div>
-    <!-- col-3 float-left end -->
+
+    <!-- Change Password -->
+    <!-- '"` -->
+    <!-- </textarea></xmp> -->
+    <form accept-charset="UTF-8" action="/account" class="edit_user" id="change_password" method="post">
+      <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
+      <dl class="form-group password-confirmation-form">
+        <dt><label for="user_old_password">Old password</label></dt>
+        <dd><input class="form-control form-control" id="user_old_password" name="user[old_password]" required="required" tabindex="2" type="password"></dd>
+      </dl>
+      <dl class="form-group password-confirmation-form">
+        <dt><label for="user_new_password">New password</label></dt>
+        <dd><input class="form-control form-control" data-autocheck-authenticity-token="xAd6OXhToege56KzLluN+ywXaWXmB6wJaiXPnVHfuLcZ+g/Bu4lCYnwWEWyxb0s/gNSwkNgQ0ZEJb1/xMP2RrQ==" data-autocheck-url="/signup_check/password" id="user_new_password" name="user[password]"
+            required="required" tabindex="2" type="password"></dd>
+      </dl>
+      <dl class="form-group password-confirmation-form">
+        <dt><label for="user_confirm_new_password">Confirm new password</label></dt>
+        <dd><input class="form-control form-control" id="user_confirm_new_password" name="user[password_confirmation]" required="required" tabindex="2" type="password"></dd>
+      </dl>
+      <p>
+        <!-- <button class="btn mr-2" type="submit">Update password</button> -->
+        <p><button type="submit" class="admin-update-btn">Update profile</button></p>
+        <span><a href="/password_reset">Forgot password</a></span>
+      </p>
+    </form>
 
 
 
-
-    <div class="col-9 float-left">
-      <div class="Subhead">
-        <h2 class="Subhead-heading">Change password</h2>
-      </div>
-
-      <!-- Change Password -->
-      <!-- '"` -->
-      <!-- </textarea></xmp> -->
-      <form accept-charset="UTF-8" action="/account" class="edit_user" id="change_password" method="post">
-        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
-        <dl class="form-group password-confirmation-form">
-          <dt><label for="user_old_password">Old password</label></dt>
-          <dd><input class="form-control form-control" id="user_old_password" name="user[old_password]" required="required" tabindex="2" type="password"></dd>
-        </dl>
-        <dl class="form-group password-confirmation-form">
-          <dt><label for="user_new_password">New password</label></dt>
-          <dd><input class="form-control form-control" data-autocheck-authenticity-token="xAd6OXhToege56KzLluN+ywXaWXmB6wJaiXPnVHfuLcZ+g/Bu4lCYnwWEWyxb0s/gNSwkNgQ0ZEJb1/xMP2RrQ==" data-autocheck-url="/signup_check/password" id="user_new_password" name="user[password]"
-              required="required" tabindex="2" type="password"></dd>
-        </dl>
-        <dl class="form-group password-confirmation-form">
-          <dt><label for="user_confirm_new_password">Confirm new password</label></dt>
-          <dd><input class="form-control form-control" id="user_confirm_new_password" name="user[password_confirmation]" required="required" tabindex="2" type="password"></dd>
-        </dl>
-        <p>
-          <button class="btn mr-2" type="submit">Update password</button>
-          <span><a href="/password_reset">I forgot my password</a></span>
-        </p>
-      </form>
-
-
-
-      <!-- Delete Account -->
-      <div class="Subhead Subhead--spacious">
-        <h2 class="Subhead-heading Subhead-heading--danger">Delete account</h2>
-      </div>
-      <div class="delete_account_message">
-        <p>Are you certain you want to delete your account?</p>
-
-        <p><a href="#delete_account_confirmation" rel="facebox[.dangerzone]" class="btn btn-danger" tabindex="4">Delete your account</a></p>
-      </div>
+    <!-- Delete Account -->
+    <div class="subhead subhead--spacious">
+      <h2 class="subhead-heading subhead-heading--danger">Delete account</h2>
     </div>
-    <!-- col-9 float-left end -->
+    <div class="delete_account_message">
+      <p>Are you certain you want to delete your account?</p>
 
+      <p><a href="#delete_account_confirmation" rel="facebox[.dangerzone]" class="btn btn-danger" tabindex="4">Delete your account</a></p>
+    </div>
   </div>
-  <!-- page container-fluid end-->
+  <!-- col-9 float-left end -->
 
+</div>
+<!-- page container-fluid end-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <!-- <script src="../js/app.js"></script> -->
   <script src="js/nav.js"></script>
