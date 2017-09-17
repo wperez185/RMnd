@@ -753,139 +753,6 @@ label {
   margin: 0;
 }
 
-
-/********************************************************************************************/
-
-
-                                       /*Admin Page */
-
-
-/********************************************************************************************/
-
-div {
-  display: block;
-}
-
-.page-content {
-  padding-top: 20px;
-}
-
-
-/*Have this for both index and admin pages need to fix*/
-
-
-/*.container-fluid {
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
-}*/
-
-.clearfix::before {
-  display: table;
-  content: "";
-}
-
-.float-left {
-  float: left !important;
-}
-
-.col-3 {
-  width: 25%;
-  padding-right: 24px !important;
-  top: 40px;
-}
-
-.col-9 {
-  width: 75%;
-  top: 40px;
-}
-
-.menu {
-  margin-bottom: 15px;
-  list-style: none;
-  background-color: #fff;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-}
-
-.menu-header:first-child {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-
-.menu-header {
-  display: block;
-  padding: 8px 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 20px;
-  color: blue;
-  background-color: #f3f5f8;
-  border-bottom: 1px solid #e1e4e8;
-}
-
-.menu-item.selected {
-  font-weight: 600;
-  color: #24292e;
-  cursor: default;
-  background-color: #fff;
-}
-
-.menu-item {
-  position: relative;
-  display: block;
-  padding: 8px 10px;
-  border-bottom: 1px solid #e1e4e8;
-}
-
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.Subhead {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-  border-bottom: 1px #e1e4e8 solid;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
-form {
-  display: block;
-  margin-top: 0em;
-}
-
-.form-group {
-  margin: 15px 0;
-}
-
-dl {
-  display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
-.text-small {
-  font-size: 12px !important;
-}
-
-.left-menu li {
-  list-style: none;
-}
-
-div {
-  display: block;
-}
-
-
 /********************************************************************************************/
 
 
@@ -1875,13 +1742,6 @@ width: 60%;
 
 
   /********************************************************************************************/
-
-  /*@media (min-width : 480px) and (max-width : 575px)
-  @media (min-width: 576px) and (max-width : 640px)
-  @media (min-width: 641px) and (max-width : 768px)
-  @media (min-width: 769px) and (max-width : 920px)
-  @media (min-width: 921px) and (max-width : 1200px)
-  @media (min-width: 1201px)*/
 .menu {
   width: 210%;
 }
@@ -1961,6 +1821,143 @@ width: 60%;
   .form-control {
     width: 60%;
   }
+}
+
+/********************************************************************************************/
+
+
+                                       /*Admin Page */
+
+
+/********************************************************************************************/
+/*@media (min-width : 480px) and (max-width : 575px)
+@media (min-width: 576px) and (max-width : 640px)
+@media (min-width: 641px) and (max-width : 768px)
+@media (min-width: 769px) and (max-width : 920px)
+@media (min-width: 921px) and (max-width : 1200px)
+@media (min-width: 1201px)*/
+
+div {
+  display: block;
+}
+
+.page-content {
+  padding-top: 20px;
+}
+
+
+/*Have this for both index and admin pages need to fix*/
+
+
+/*.container-fluid {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}*/
+
+.clearfix::before {
+  display: table;
+  content: "";
+}
+
+.float-left {
+  float: left !important;
+}
+
+.col-3 {
+  width: 25%;
+  padding-right: 24px !important;
+  top: 40px;
+}
+
+.col-9 {
+  width: 75%;
+  top: 40px;
+}
+
+.menu {
+  margin-bottom: 15px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+}
+
+.menu-header:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.menu-header {
+  display: block;
+  padding: 8px 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: blue;
+  background-color: #f3f5f8;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.menu-item.selected {
+  font-weight: 600;
+  color: #24292e;
+  cursor: default;
+  background-color: #fff;
+}
+
+.menu-item {
+  position: relative;
+  display: block;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.Subhead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px #e1e4e8 solid;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+dl {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.text-small {
+  font-size: 12px !important;
+}
+
+.left-menu li {
+  list-style: none;
+}
+
+div {
+  display: block;
 }
 
 /* ------------------------------ */
