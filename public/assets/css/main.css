@@ -752,63 +752,6 @@ label {
 .row {
   margin: 0;
 }
-
-/********************************************************************************************/
-
-
-                                        /*User Data Page*/
-
-
-/********************************************************************************************/
-
-ul.job-post {
-  width: 90%;
-  position: relative;
-  list-style: none;
-  left: 18px;
-  background-color: whitesmoke;
-}
-
-.job-post li {
-  margin-bottom: 15px;
-}
-
-ul.data-post {
-  margin-top: 70px;
-  width: 90%;
-  list-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: whitesmoke;
-}
-
-.data-post li {
-  margin-bottom: 15px;
-}
-
-.center2 {
-  text-align: center;
-  position: relative;
-  top: 75px;
-}
-
-.button5 {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 6px;
-  float: right;
-  cursor: pointer;
-  background-color: #555555;
-  position: relative;
-  left: 6px;
-}
-
-
 /********************************************************************************************/
 
 
@@ -1010,7 +953,7 @@ div#signUpBox {
 
 /********************************************************************************************/
 
-@media only screen and (min-width : 769px) and (max-width : 920px) {
+/*@media only screen and (min-width : 769px) and (max-width : 920px) {
   body {
     background-color: #fff;
   }
@@ -1151,7 +1094,7 @@ h1.data-h1 {
     font-weight: 700;
     font-size: 18px;
 }
-}
+}*/
 
 
 
@@ -1962,6 +1905,117 @@ dl {
   list-style: none;
 }
 
+/********************************************************************************************/
+
+
+                                        /*User Data Page*/
+
+
+/********************************************************************************************/
+
+ul.job-post {
+  width: 90%;
+  position: relative;
+  list-style: none;
+  left: 18px;
+  background-color: whitesmoke;
+}
+
+.job-post li {
+  margin-bottom: 15px;
+}
+
+ul.data-post {
+  margin-top: 70px;
+  width: 90%;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+}
+
+.data-post li {
+  margin-bottom: 15px;
+}
+
+.center2 {
+  text-align: center;
+  position: relative;
+  top: 75px;
+}
+
+.button5 {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 6px;
+  float: right;
+  cursor: pointer;
+  background-color: #555555;
+  position: relative;
+  left: 6px;
+}
+/******************TEST**********************************/
+.data-page {
+  background: #ebebea;
+}
+.grid {
+  display: flex;
+  width: 100%;
+  max-width: 1045px;
+  margin: 0 auto;
+}
+
+.grid-sidebar {
+  flex: 0 0 280px;
+  margin-right: 75px;
+  margin-top: 50px;
+  background: #ebebea;
+}
+
+.recent-search {
+  margin: 0;
+  margin-right: 65px;
+}
+
+.result-btn {
+  margin-left: 35px;
+}
+
+.filter-results {
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 65px;
+    margin-bottom: 10px;
+}
+.salary-div p {
+    text-align: left;
+    margin: 0;
+    margin-left: 35px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.salary-p {
+    margin-top: 20px;
+}
+.salary-div ul {
+    margin-top: 10px;
+}
+
+.grid-content {
+  flex: 1 1 auto;
+  background: #fff;
+  margin-top: 50px;
+}
+
+/*Need to put this in hide when smaller screens*/
+.hide {
+  display: inline-block;
+}
 
 /* ------------------------------ */
 /* Search Form */
