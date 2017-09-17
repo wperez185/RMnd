@@ -262,9 +262,9 @@ img.logo {
 div#signInBox {
     width: 250px;
 }
-div#signUpBox {
+/*div#signUpBox {
     width: 300px;
-}
+}*/
 
 .panel__wrap .panel__box:first-child {
   left: 0;
@@ -1426,6 +1426,9 @@ h1.data-h1 {
 
 
   /********************************************************************************************/
+.login {
+  background: #e7e7e7;
+}
   .logo-login {
     height: 200px;
   background-size: contain;
@@ -1434,12 +1437,22 @@ h1.data-h1 {
       background-image: url('/img/logo3.JPG');
   }
   .login-page {
-      background-color: #e7e7e7;
+      background-color: #fff;
       height: 300px;
       width: 90%;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 50px;
   }
+  form#signInForm {
+    margin-top: 30px;
+}
+.login-subhead-heading {
+    text-align: center;
+}
+.login-hr {
+  width: 135%;
+}
   .signup-create {
     font-size: 13px;
     margin-left: 15px;
@@ -1490,19 +1503,30 @@ h1.data-h1 {
 
 
 /********************************************************************************************/
+.signup {
+  background: #e7e7e7;
+}
 .logo-signup {
   height: 200px;
-background-size: contain;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-image: url('/img/logo3.JPG');
+  background-size: contain;
+  background: #fff;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url('/img/logo3.JPG');
+}
+.signup-subhead-heading {
+    text-align: center;
+}
+.signup-hr {
+  width: 135%;
 }
 .signup-page {
-    background-color: #e7e7e7;
-    height: 500px;
+    background-color: #fff;
+    height: 400px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 .signup-create {
   font-size: 13px;
@@ -1512,7 +1536,12 @@ background-size: contain;
   font-size: 15px;
   margin-top: 10px;
 }
-
+.signup-btn {
+margin: 0 auto;
+font-size: 16px;
+background: #333;
+color: white;
+}
 @media (min-width : 480px) and (max-width : 575px){
 .signup-page {
 width: 80%;
