@@ -94,9 +94,9 @@ img.logo {
   font-size: 18px;
   font-weight: 500;
 }
-.data-main {
+/*.data-main {
   margin-top: 65px;
-}
+}*/
 
 
 /*text-align: center;
@@ -152,6 +152,7 @@ img.logo {
 
 .pagination {
   display: inline-block;
+  background: #fff;
 }
 
 .pagination a {
@@ -1784,13 +1785,6 @@ width: 60%;
 
 
 /********************************************************************************************/
-/*@media (min-width : 480px) and (max-width : 575px)
-@media (min-width: 576px) and (max-width : 640px)
-@media (min-width: 641px) and (max-width : 768px)
-@media (min-width: 769px) and (max-width : 920px)
-@media (min-width: 921px) and (max-width : 1200px)
-@media (min-width: 1201px)*/
-
 div {
   display: block;
 }
@@ -1913,7 +1907,7 @@ dl {
 
 /********************************************************************************************/
 
-ul.job-post {
+/*ul.job-post {
   width: 90%;
   position: relative;
   list-style: none;
@@ -1958,14 +1952,30 @@ ul.data-post {
   background-color: #555555;
   position: relative;
   left: 6px;
-}
+}*/
 /******************TEST**********************************/
+/*@media (min-width : 480px) and (max-width : 575px)
+@media (min-width: 576px) and (max-width : 640px)
+@media (min-width: 641px) and (max-width : 768px)
+@media (min-width: 769px) and (max-width : 920px)
+@media (min-width: 921px) and (max-width : 1200px)
+@media (min-width: 1201px)*/
+
+.hide {
+  display: none;
+}
 .data-page {
   background: #ebebea;
 }
+.top-img {
+    background: white;
+}
+.data-logo {
+    width: 30%;
+}
 .grid {
   display: flex;
-  width: 100%;
+  width: 90%;
   max-width: 1045px;
   margin: 0 auto;
 }
@@ -1984,6 +1994,7 @@ ul.data-post {
 
 .result-btn {
   margin-left: 35px;
+  margin-top: 5px;
 }
 
 .filter-results {
@@ -1999,24 +2010,138 @@ ul.data-post {
     font-size: 16px;
     font-weight: 600;
 }
-.salary-p {
-    margin-top: 20px;
-}
 .salary-div ul {
     margin-top: 10px;
+}
+.salary-div li {
+    border: 1px solid gray;
+    padding: 4px;
+    width: 75%;
+    background: #fff;
+}
+.salary-p {
+    margin-top: 20px;
 }
 
 .grid-content {
   flex: 1 1 auto;
-  background: #fff;
+  background: #ebebea;
   margin-top: 50px;
+}
+/*.num-jobs {
+    margin: 0;
+    margin-bottom: 15px;
+}*/
+#job-list {
+    background: white;
+}
+.data-main p {
+    margin-left: 0;
+}
+.job-post li {
+  padding-top: 10px;
+}
+.apply-btn {
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
+    background: #333;
+    margin-bottom: 10px;
+    color: white;
+}
+.data-btn {
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 18px;
+  background: #333;
+  margin-bottom: 10px;
+  color: white;
+}
+
+@media (min-width: 769px) and (max-width : 920px){
+  .hide {
+    display: inline-block;
+  }
+  .data-btn {
+    display: none;
+  }
+  .data-logo {
+    width: 23%;
+}
+.grid {
+    width: 97%;
+}
+.data-main p {
+    text-align: left;
+}
+.grid-sidebar {
+     margin-right: 0;
+}
+
+}
+@media (min-width: 921px) and (max-width : 1200px){
+  .hide {
+    display: inline-block;
+  }
+  .data-btn {
+    display: none;
+  }
+  .data-logo {
+    width: 20%;
+}
+.grid {
+    width: 97%;
+}
+.filter-results {
+    margin-left: 35px;
+}
+.recent-search {
+    margin-left: 35px;
+}
+.salary-div p {
+  margin-left: 40px;
+}
+}
+@media (min-width: 1201px){
+  .hide {
+    display: inline-block;
+  }
+  .data-btn {
+    display: none;
+  }
+  .data-logo {
+    width: 15%;
+  }
+  .grid {
+    width: 100%;
+  }
+  .result-btn {
+  margin-left: 0;
+  }
+  .filter-results {
+    margin-left: 0;
+  }
+  .recent-search {
+    margin-left: 0;
+  }
+  .salary-div p {
+  margin-left: 0;
+  }
+  .salary-div ul {
+    padding-left: 0;
+}
 }
 
 /*Need to put this in hide when smaller screens*/
+/*.hide {
+  display: inline-block;
+}*/
+/*.data-button {
+  display: none;
+}
 .hide {
   display: inline-block;
-}
-
+}*/
 /* ------------------------------ */
 /* Search Form */
 /* ------------------------------ */

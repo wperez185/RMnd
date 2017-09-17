@@ -14,8 +14,7 @@ function button() {
       jobList.html(" ");
       data.forEach(function (job) {
           $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + job.salary + "</span>" +
-           "<span>" +
-          job.postedDate + "</span>" + "</li>" + "<hr>");
+           "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
           const salary = $(".salary").append("<li>" + job.salary + "</li>");
           const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
           const location = $(".location").append("<li>" + job.state + "</li>");

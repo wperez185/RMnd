@@ -10,7 +10,9 @@
 </head>
 
 <body class="data-page">
-  <img src="./img/logo3.JPG" class="logo" alt="RMnd logo">
+  <div class="top-img">
+    <img src="./img/logo3.JPG" class="data-logo" alt="RMnd logo">
+    </div>
   <hr>
   <div class="topnav" id="myTopnav">
   <a href="#home">Home</a>
@@ -41,9 +43,13 @@
           </div>
     </div>
     <div class="grid-content">
-      <h2>Engineer Jobs</h2>
-      <p>1000+ Jobs Found</p>
-      <ul>
+      <div class="data-main">
+      <h2 class="category-search">Engineer Jobs</h2>
+      <p class="num-jobs">1000+ Jobs Found</p>
+      </div>
+      <ul class="job-post" id="job-list">
+    </ul>
+      <!-- <ul>
         <li>
           <p>Company Name</p>
           <h3>Job Position</h3>
@@ -53,10 +59,23 @@
         <li>
           Etc.
         </li>
-      </ul>
-    </div>
-  </div>
+      </ul> -->
 
+  <button class="button data-btn">More Jobs</button>
+   <div class="center hide">
+<div class="pagination">
+ <a href="#">&laquo;</a>
+ <a href="#">1</a>
+ <a href="#" class="active">2</a>
+ <a href="#">3</a>
+ <a href="#">4</a>
+ <a href="#">5</a>
+ <a href="#">6</a>
+ <a href="#">&raquo;</a>
+</div>
+</div>
+</div>
+</div>
 
     <!-- </div> -->
     <!-- col-9 float-left end -->
