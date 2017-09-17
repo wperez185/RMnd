@@ -1742,7 +1742,97 @@ width: 60%;
 
 
   /********************************************************************************************/
+  .subhead-heading {
+      margin-top: 35px;
+  }
+  .profile-menu {
+    margin-bottom: 15px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    width: 225%;
+  }
+.profile-left-menu {
+    padding: 0;
+}
+.page {
+  background-color: #e7e7e7;
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.profile-left {
+    margin-left: 100px;
+    width: 40%;
+}
+.update-btn {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    position: relative;
+    right: 20px;
+    margin-top: 5px;
+}
+@media (min-width : 480px) and (max-width : 575px) {
+  .profile-left {
+    margin-left: 155px;
+}
+}
+@media (min-width: 576px) and (max-width : 640px){
+.profile-left {
+    margin-left: 185px;
+}
+.profile-menu {
+  width: 195%;
+}
+}
+@media (min-width: 641px) and (max-width : 768px){
+  .profile-menu {
+    width: 158%;
+}
+  .profile-left {
+      margin-left: 130px;
+  }
+}
+@media (min-width: 769px) and (max-width : 920px){
+  .profile-menu {
+    width: 125%;
+}
+  .profile-left {
+      margin-left: 130px;
+  }
+  .update-btn {
+    right: 113px;
+  }
+  .form-control {
+    width: 70%;
+  }
+}
+
+@media (min-width: 921px) and (max-width : 1200px) {
+  .profile-menu {
+  width: 90%;
+}
+  .profile-left {
+      margin-left: 130px;
+  }
+  .form-control {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .profile-menu {
+    width: 75%;
+  }
+  .form-control {
+    width: 60%;
+  }
+}
 
 /********************************************************************************************/
 
