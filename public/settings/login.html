@@ -9,21 +9,22 @@
 </head>
 
 <body>
-   <img src="./img/logo3.JPG" class="logo" alt="RMnd logo">
-  <hr>
-  <div class="topnav" id="myTopnav">
+  <header class="logo-login">
+   <!-- <img src="./img/logo3.JPG" class="logo" alt="RMnd logo"> -->
+ </header>
+  <!-- <div class="topnav" id="myTopnav">
   <a href="#home">Home</a>
   <a href="/jobPosts">Find Jobs</a>
   <a href="#contact">Career Resources</a>
   <a href="#about">Post a Resume</a>
   <a href="#about">Company Profiles</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-  <div class="page container">
+</div> -->
+  <div class="login-page container">
     <!-- page container start-->
     <div class="col-9 float-left">
       <div class="Subhead">
-        <h2 class="Subhead-heading">Login</h2>
+        <h2 class="Subhead-heading">Sign In</h2>
       </div>
 
       <!-- form -->
@@ -37,13 +38,20 @@
                 <label>Password
             <input id="userPassword" type="password"/>
           </label>
-                <input type="submit" />
+
+                <!-- Implement so the button goes to the user index page -->
+
+                <a href="/"><button class="signin">Sign In</button></a>
+                <span class="forgot-password"><a href="/password_reset">Forgot password</a></span>
               </div>
             </form>
     </div>
+    <div class="signup-create"><a href="/signup">Not a member? Create an account</a></div>
     <!-- col-9 float-left end -->
   </div>
   <!-- page container end-->
+</div>
+</div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <!-- <script src="../js/app.js"></script> -->
   <script src="js/nav.js"></script>
