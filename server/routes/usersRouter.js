@@ -8,6 +8,83 @@ const router = express.Router();
 
 const jsonParser = bodyParser.json();
 
+router.post('/login', jsonParser, (req, res) => {
+  const requiredFields = ['username', 'password'];
+  const missingField = requiredFields.find(field => !(field in req.body));
+
+  if (missingField) {
+    return res.status(422).json({
+      code: 422,
+      reason: 'ValidationError',
+      message: 'Missing field',
+      location: missingField
+    });
+  }
+
+  const stringFields = ['username', 'password'];
+  const nonStringField = stringFields.find(field =>
+    (field in req.body) && typeof req.body[field] !== 'string'
+  );
+
+  if (nonStringField) {
+    return res.status(422).json({
+      code: 422,
+      reason: 'ValidationError',
+      message: 'Incorrect field type: expected string',
+      location: nonStringField
+    });
+  }
+  let password = req.body.password;
+  let username = req.body.username;
+  let userId = null;
+  return User
+    .find({username})
+    .then(results => {
+      if(results && results.length > 0) {
+        let user = results[0];
+        console.log(user);
+        userId = user._id;
+        return user.validatePassword(password)
+        .then(value => {
+          console.log(value);
+          if (value){
+            return res.status(201).json({
+              code: 201,
+              reason: 'Success',
+              message: userId,
+              location: nonStringField
+            });
+          } else {
+            return res.status(401).json({
+              code: 401,
+              reason: 'ValidationError',
+              message: 'Incorrect  username and or password',
+              location: nonStringField
+            });
+          }
+        })
+      } else {
+        return res.status(401).json({
+          code: 401,
+          reason: 'ValidationError',
+          message: 'Incorrect  username and or password',
+          location: nonStringField
+        });
+      }
+      // console.log(results);
+      // console.log(results[0].validatePassword(password));
+    })
+    .catch(err => {
+      // Forward validation errors on to the client, otherwise give a 500
+      // error because something unexpected has happened
+      if (err.reason === 'ValidationError') {
+        return res.status(err.code).json(err);
+      }
+      console.log(err);
+      res.status(500).json({code: 500, message: 'Internal server error'});
+    });
+});
+
 // Post to register a new user
 router.post('/', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password'];
