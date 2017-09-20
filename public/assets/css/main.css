@@ -45,7 +45,7 @@ nav {
 p {
   font-size: 16px;
   /*font-weight: 500;*/
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 ul {
@@ -60,6 +60,10 @@ ul {
 }
 .hide {
   display: none;
+}
+
+.margin-left {
+    margin-left: 20px;
 }
 
 /********************************************************************************************/
@@ -1148,6 +1152,8 @@ h1.data-h1 {
   background-color: #333;
   overflow: hidden;
   width: 100%;
+  margin-top: 40px;
+  display: flex;
 }
 
 
@@ -1161,6 +1167,10 @@ h1.data-h1 {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.right {
+  margin-left: auto;
 }
 
 /* Change the color of links on hover */
@@ -1514,19 +1524,22 @@ h1.data-h1 {
   background-repeat: no-repeat;
   background-image: url('/img/logo3.JPG');
 }
+.signup-subhead {
+    padding: 10px;
+}
 .signup-subhead-heading {
     text-align: center;
 }
 .signup-hr {
-  width: 135%;
+  width: 100%;
 }
 .signup-page {
     background-color: #fff;
     height: 400px;
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
 }
 .signup-create {
   font-size: 13px;
@@ -1536,11 +1549,12 @@ h1.data-h1 {
   font-size: 15px;
   margin-top: 10px;
 }
-.signup-btn {
-margin: 0 auto;
-font-size: 16px;
-background: #333;
-color: white;
+.signup-btn {
+     margin: 0 auto;
+      font-size: 18px;
+      background: #333;
+      color: white;
+      display: block;
 }
 @media (min-width : 480px) and (max-width : 575px){
 .signup-page {
@@ -1856,6 +1870,8 @@ ul.data-post {
 }
 .top-img {
     background: white;
+    display: flex;
+    align-items: center;
 }
 .data-logo {
     width: 20%;
@@ -1978,9 +1994,9 @@ ul.data-post {
   .data-btn {
     display: none;
   }
-  .data-logo {
+  /*.data-logo {
     width: 20%;
-}
+}*/
 .grid {
     width: 97%;
 }
@@ -2001,9 +2017,9 @@ ul.data-post {
   .data-btn {
     display: none;
   }
-  .data-logo {
-    width: 15%;
-  }
+  /*.data-logo {
+    width: 25%;
+  }*/
   .grid {
     width: 100%;
   }
