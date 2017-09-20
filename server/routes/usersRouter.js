@@ -244,11 +244,27 @@ router.put('/:id', jsonParser, (req, res) => {
     return res.status(400).send(message);
   }
   console.log(`Updating blog post \`${req.params.id}\``);
-  User.findByIdAndUpdate(req.params.id, {$set:{
-    id: req.body.id,
+  let obj = {};
+  if(req.body.firstName){
+    obj.firstName = req.body.firstName;
   }
+  if(req.body.lastName){
+    obj.lastName = req.body.lastName;
+  }
+  if(req.body.city){
+    obj.city = req.body.city;
+  }
+  if(req.body.state){
+    obj.statte = req.body.state;
+  }
+  if(req.body.zipcode){
+    obj.zipcode = req.body.zipcode;
+  }
+  User.findByIdAndUpdate(req.params.id, {$set:obj
 },{new: true})
-  .then(jobPosts => res.status(204).end())
+  .then(jobPosts =>{
+    console.log(jobPosts);
+    res.status(204).end()})
   .catch(err => res.status(500).json({message: 'Internal server error'}));
 });
 
