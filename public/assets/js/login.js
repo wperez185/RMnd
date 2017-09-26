@@ -25,7 +25,7 @@ $(function(){
         let user = data.message;
         console.log(user);
         localStorage.setItem("RMnd-user", user);
-        window.location.href = "/";
+        window.location.href = "/jobPosts";
       }
       // ${localStorage.getItem("RMnd-user")}
       },
