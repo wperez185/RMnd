@@ -11,16 +11,17 @@
 <body>
   <div class="top-img">
     <img src="./img/logo3.JPG" class="data-logo" alt="RMnd logo">
+    <div class="topnav" id="myTopnav">
+    <a href="/">Home</a>
+    <a href="/jobPosts">Find Jobs</a>
+    <a href="/contact">Career Resources</a>
+    <a href="#">Post a Resume</a>
+    <a href="/about">Company Profiles</a>
+    <!-- <a href="/profile" class="right">Settings</a> -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
     </div>
   <hr>
-  <div class="topnav" id="myTopnav">
-  <a href="/">Home</a>
-  <a href="/jobPosts">Find Jobs</a>
-  <a href="/contact">Career Resources</a>
-  <a href="#">Post a Resume</a>
-  <a href="/about">Company Profiles</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
 <div class="page-content container-fluid clearfix">
   <!-- page container start-->
 
@@ -57,20 +58,20 @@
       <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
       <dl class="form-group password-confirmation-form">
         <dt><label for="user_old_password">Old password</label></dt>
-        <dd><input class="form-control form-control" id="user_old_password" name="user[old_password]" required="required" tabindex="2" type="password"></dd>
+        <dd><input class="form-control form-control" id="user_old_password" name="user[old_password]" required tabindex="2" type="password"></dd>
       </dl>
       <dl class="form-group password-confirmation-form">
         <dt><label for="user_new_password">New password</label></dt>
         <dd><input class="form-control form-control" data-autocheck-authenticity-token="xAd6OXhToege56KzLluN+ywXaWXmB6wJaiXPnVHfuLcZ+g/Bu4lCYnwWEWyxb0s/gNSwkNgQ0ZEJb1/xMP2RrQ==" data-autocheck-url="/signup_check/password" id="user_new_password" name="user[password]"
-            required="required" tabindex="2" type="password"></dd>
+            required tabindex="2" type="password"></dd>
       </dl>
       <dl class="form-group password-confirmation-form">
         <dt><label for="user_confirm_new_password">Confirm new password</label></dt>
-        <dd><input class="form-control form-control" id="user_confirm_new_password" name="user[password_confirmation]" required="required" tabindex="2" type="password"></dd>
+        <dd><input class="form-control form-control" id="user_confirm_new_password" name="user[password_confirmation]" required tabindex="2" type="password"></dd>
       </dl>
       <p>
         <!-- <button class="btn mr-2" type="submit">Update password</button> -->
-        <p><button type="submit" class="admin-update-btn">Update profile</button></p>
+        <div class="admin-update-btn"><button type="submit" class="admin-update-btn">Update profile</button></div>
         <span><a href="/password_reset">Forgot password</a></span>
       </p>
     </form>
@@ -81,10 +82,10 @@
     <div class="subhead subhead--spacious">
       <h2 class="subhead-heading subhead-heading--danger">Delete account</h2>
     </div>
-    <div class="delete_account_message">
+    <div class="delete_account_p">
       <p>Are you certain you want to delete your account?</p>
 
-      <p><a href="#delete_account_confirmation" rel="facebox[.dangerzone]" class="btn btn-danger" tabindex="4">Delete your account</a></p>
+      <button class="delete-account"><a href="#delete_account_confirmation" rel="facebox[.dangerzone]" class="btn btn-danger" tabindex="4">Delete your account</a></button>
     </div>
   </div>
   <!-- col-9 float-left end -->

@@ -35,3 +35,10 @@ $(function(){
     })
   })
 });
+
+
+// if(user == username ){
+//   $("topnav").addClass("right");
+// }else {
+//   $("topnav").addClass("settings");
+// }

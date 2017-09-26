@@ -11,7 +11,7 @@
 
 <body class="signup">
   <div class="top-img">
-    <a href="/"><img src="./img/logo3.JPG" class="data-logo" alt="RMnd logo"></a>
+    <img src="./img/logo3.JPG" class="data-logo" alt="RMnd logo">
     </div>
   <!-- <div class="topnav" id="myTopnav">
   <a href="#home">Home</a>
@@ -33,24 +33,22 @@
       <form id="signUpForm">
               <div class="row">
                 <div class="col-lg-12">
-                      <div>
                         <div id="signUpBox">
-                          <label>UserName
-                      <input id="newUser" type="text" name="username"/>
-                    </label>
-                          <label>Password
-                      <input id="newPassword" type="password"/>
-                    </label>
-                          <label>Confirm password
-                      <input id="confirmPassword" type="password"/>
-                    </label>
-                          <a href="/"><button class="signup-btn">Sign In</button></a>
+                          <div class="form-label"> <label>UserName
+                      <input id="newUser" type="text" name="username" required/>
+                    </label></div>
+                        <div class="form-label">  <label>Password
+                      <input id="newPassword" type="password" required/>
+                    </label></div>
+                        <div class="form-label">  <label>Confirm password
+                      <input id="confirmPassword" type="password" required/>
+                    </label></div>
+                          <div class="signup-class-btn"><button class="signup-btn">Sign Up</button></div>
             </form>
     </div>
     <div class="signin-create"><a href="/login">Have an account? Sign in</a></div>
     <span class="signin-forgot-password"><a href="/password_reset">Forgot password</a></span>
     <!-- col-9 float-left end -->
-  </div>
   <!-- page container end-->
 </div>
 </div>
