@@ -153,6 +153,9 @@ img.logo {
 .center {
   text-align: center;
 }
+.pagination-center {
+    width: 100%;
+}
 
 .pagination {
   display: inline-block;
@@ -2262,4 +2265,8 @@ fieldset {
 /* ------------------------------ */
 
 #searchForm {
+  margin-left: 35px;
+}
+#jobTitle {
+    width: 55%;
 }

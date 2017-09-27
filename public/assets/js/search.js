@@ -43,7 +43,6 @@ function loadParams(){
 
 
   console.log(getUrlVars()["jobTitle"]);
-  console.log("test");
 
   $("#searchForm").submit(function(event) {
     event.preventDefault();
