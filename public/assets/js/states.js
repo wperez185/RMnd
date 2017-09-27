@@ -60,4 +60,5 @@ const states = {
     "WY": "Wyoming"
 }
 
-console.log(states);
+// $('.js-location-dropdown').html(states.map((s) => '').join(''));
+ // let options = ''; for (let i = 0; i ' + states[i] + ''; } $('.js-location-dropdown').html(options);
