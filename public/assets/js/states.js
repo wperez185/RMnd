@@ -59,6 +59,9 @@ const states = {
     "WI": "Wisconsin",
     "WY": "Wyoming"
 }
+let html = "<option value='0'>Please select one</option>";
+for(var key in states){
+  html += `<option value='${key}'> ${states[key]} </option>`;
+}
 
-// $('.js-location-dropdown').html(states.map((s) => '').join(''));
- // let options = ''; for (let i = 0; i ' + states[i] + ''; } $('.js-location-dropdown').html(options);
+$('#location').html(html);

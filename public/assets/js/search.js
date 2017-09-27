@@ -31,10 +31,10 @@ function loadParams(){
         "Access-Control-Allow-Origin": "*"
       },
       success: function(data) {
-      console.log(data);
+      // console.log(data);
       },
       error: function(err) {
-        console.log(err);
+        // console.log(err);
       }
     })
  }
@@ -42,7 +42,7 @@ function loadParams(){
   loadParams();
 
 
-  console.log(getUrlVars()["jobTitle"]);
+  // console.log(getUrlVars()["jobTitle"]);
 
   $("#searchForm").submit(function(event) {
     event.preventDefault();
@@ -77,4 +77,30 @@ function loadParams(){
     //     console.log(data);
     //   }
   });
+
+  $("#searchForm").submit(function(event){
+    event.preventDefault();
+  const jobTitle = $("#jobTitle").val();
+  const location = $("#location").val();
+  let obj = {
+    jobTitle,location
+  };
+  $.ajax({
+    url: `/api/jobSearch/filters`,
+    contentType: 'application/json',
+    type: 'post',
+    dataType: "json",
+    crossdomain: true,
+    data: JSON.stringify(obj),
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
+    success: function(data) {
+    console.log(data);
+    },
+    error: function(err) {
+      console.log(err);
+    }
+  })
+});
 });
