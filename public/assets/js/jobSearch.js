@@ -101,7 +101,7 @@ function loadParams(){
       jobTitle = "jobTitle=" + $("#jobTitle").val();
     }
     if($("#location").val()){
-      state = "state=" + $("#location, #dataLocation").val();
+      state = "state=" + $("#location").val();
     }
     if(jobTitle && state){
       search = "?" +jobTitle + "&" + state;
@@ -116,7 +116,7 @@ function loadParams(){
   $("#searchForm, #dataSearchForm").submit(function(event){
     event.preventDefault();
   const jobTitle = $("#jobTitle").val();
-  const state = $("#dataLocation :selected, #location :selected").text();
+  const state = $("#location :selected").text();
   let obj = {
     state
   };
