@@ -74,10 +74,10 @@ ul {
 
 /********************************************************************************************/
 
-img.logo {
+/*img.logo {
   width: 140px;
   height: 130px;
-}
+}*/
 
 /********************************************************************************************/
 
@@ -654,9 +654,9 @@ label {
 .panel {
   left: 0;
 }
-img.logo {
+/*img.logo {
   width: 75px;
-}
+}*/
 p {
   font-size: 18px;
 }
@@ -674,14 +674,14 @@ p {
 
 
 @media (min-width: 641px) and (max-width : 768px){
-img.logo {
+/*img.logo {
     width: 90px;
   }
 .bottom-logo {
   height: 106px;
   width: 117px;
-}
-.panel {
+}*/
+/*.panel {
   height: 560px;
 }
 div#signUpBox {
@@ -689,7 +689,7 @@ div#signUpBox {
 }
 div#signInBox {
   width: 280px;
-}
+}*/
 }
 
 
@@ -697,15 +697,12 @@ div#signInBox {
 
 
 @media (min-width: 769px) and (max-width : 920px) {
-p {
-  font-size: 18px;
-  text-align: center;
-  }
+
 .jobs-main {
   font-size: 23px;
   text-align: left;
 }
-.bottom-logo {
+/*.bottom-logo {
   height: 125px;
   width: 165px;
 }
@@ -728,7 +725,7 @@ div#signInBox {
 }
 div#signUpBox {
   width: 330px;
-}
+}*/
 }
 
 
@@ -758,7 +755,7 @@ input#mySearch {
 ul.job-post {
   left: 18px;
 }
-.panel {
+/*.panel {
   height: 700px;
 }
 .bottom-logo {
@@ -767,7 +764,7 @@ ul.job-post {
 }
 div#signInBox {
   left: 130px;
-}
+}*/
 /*div#signUpBox {
   right: 175px;
 }*/
@@ -797,7 +794,7 @@ div#signInBox {
   ul.job-post {
     left: 18px;
   }
-  .panel {
+  /*.panel {
     height: 700px;
   }
   .panel__menu li {
@@ -814,10 +811,10 @@ div#signInBox {
     left: 400px;
     width: 300px;
   }
-  div#signUpBox {
+  div#signUpBox {*/
     /*right: 350px;*/
-    width: 390px
-  }
+    /*width: 390px
+  }*/
 }
 
 /********************************************************************************************/
@@ -1907,7 +1904,7 @@ ul.data-post {
 .grid {
   display: flex;
   width: 90%;
-  max-width: 1045px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -1916,11 +1913,7 @@ ul.data-post {
   margin-right: 75px;
   margin-top: 50px;
   background: #ebebea;
-}
-
-.recent-search {
-  margin: 0;
-  margin-right: 65px;
+  margin-left: 10px;
 }
 
 .result-btn {
@@ -2034,9 +2027,7 @@ ul.data-post {
 .filter-results {
     margin-left: 35px;
 }
-.recent-search {
-    margin-left: 35px;
-}
+
 .salary-div p {
   margin-left: 40px;
 }
@@ -2044,6 +2035,7 @@ ul.data-post {
 @media (min-width: 1201px){
   .hide {
     display: inline-block;
+    margin-left: 13px;
   }
   .data-btn {
     display: none;
@@ -2058,9 +2050,6 @@ ul.data-post {
   margin-left: 0;
   }
   .filter-results {
-    margin-left: 0;
-  }
-  .recent-search {
     margin-left: 0;
   }
   .salary-div p {
@@ -2280,3 +2269,16 @@ fieldset {
     width: 33%;
     height: 26px;
 }
+
+#dataJobTitle {
+    width: 36%;
+    border-radius: 8%;
+    padding-left: 5px;
+    background: white;
+    border: 1px solid darkgrey;
+  }
+  #dataLocation {
+      width: 60%;
+      height: 26px;
+      margin-bottom: 10px;
+  }

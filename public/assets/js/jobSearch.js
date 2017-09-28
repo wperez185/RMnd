@@ -51,7 +51,7 @@ function loadData(data){
   const jobList = $("#job-list");
   jobList.html(" ");
   data.forEach(function (job) {
-      $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + job.salary + "</span>" +
+      $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + "$" + job.salary + "</span>" +
        "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
       const salary = $(".salary").append("<li>" + job.salary + "</li>");
       const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
@@ -92,7 +92,7 @@ function loadParams(){
 
   // console.log(getUrlVars()["jobTitle"]);
 
-  $("#searchForm").submit(function(event) {
+  $("#searchForm, #dataSearchForm").submit(function(event) {
     event.preventDefault();
     let search = "";
     let jobTitle,state = "";
@@ -101,7 +101,7 @@ function loadParams(){
       jobTitle = "jobTitle=" + $("#jobTitle").val();
     }
     if($("#location").val()){
-      state = "state=" + $("#location").val();
+      state = "state=" + $("#location, #dataLocation").val();
     }
     if(jobTitle && state){
       search = "?" +jobTitle + "&" + state;
@@ -111,25 +111,12 @@ function loadParams(){
       search = "?" +state;
     }
       window.location.href = "/jobPosts" +search;
-
-    // $.ajax({
-    //   url: '/api/jobSearch',
-    //   contentType: 'application/json',
-    //   type: 'get',
-    //   dataType: "json",
-    //   crossdomain: true,
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*"
-    //   },
-    //   success: function(data) {
-    //     console.log(data);
-    //   }
   });
 
-  $("#searchForm").submit(function(event){
+  $("#searchForm, #dataSearchForm").submit(function(event){
     event.preventDefault();
   const jobTitle = $("#jobTitle").val();
-  const state = $("#location :selected").text();
+  const state = $("#dataLocation :selected, #location :selected").text();
   let obj = {
     state
   };
