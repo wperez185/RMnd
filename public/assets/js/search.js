@@ -16,7 +16,7 @@ function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
   const state = getUrlVars()["location"];
 
-  if(jobTitle && location){
+  if(jobTitle && state){
     let obj = {
       jobTitle,state
     };
@@ -47,20 +47,20 @@ function loadParams(){
   $("#searchForm").submit(function(event) {
     event.preventDefault();
     let search = "";
-    let jobTitle,location = "";
+    let jobTitle,state = "";
 
     if($("#jobTitle").val()){
       jobTitle = "jobTitle=" + $("#jobTitle").val();
     }
     if($("#location").val()){
-      location = "location=" + $("#location").val();
+      state = "location=" + $("#location").val();
     }
-    if(jobTitle && location){
-      search = "?" +jobTitle + "&" + location;
+    if(jobTitle && state){
+      search = "?" +jobTitle + "&" + state;
     }else if (jobTitle) {
       search = "?" +jobTitle;
     } else {
-      search = "?" +location;
+      search = "?" +state;
     }
       window.location.href = "/jobPosts" +search;
 
@@ -81,9 +81,9 @@ function loadParams(){
   $("#searchForm").submit(function(event){
     event.preventDefault();
   const jobTitle = $("#jobTitle").val();
-  const location = $("#location").val();
+  const state = $("#location").val();
   let obj = {
-    jobTitle,location
+    jobTitle,state
   };
   $.ajax({
     url: `/api/jobSearch/filters`,

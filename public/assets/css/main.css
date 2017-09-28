@@ -1005,8 +1005,6 @@ h1.data-h1 {
   z-index: 1;
 }
 
-
-
 /* ------------------------------ */
 /* Main Header */
 /* ------------------------------ */
@@ -2272,5 +2270,13 @@ fieldset {
   margin-left: 35px;
 }
 #jobTitle {
-    width: 55%;
+    width: 33%;
+    border-radius: 8%;
+    padding-left: 5px;
+    background: white;
+    border: 1px solid darkgrey;
+}
+#location {
+    width: 33%;
+    height: 26px;
 }

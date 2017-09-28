@@ -18,7 +18,7 @@ function button() {
            "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
           const salary = $(".salary").append("<li>" + job.salary + "</li>");
           const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
-          const location = $(".location").append("<li>" + job.state + "</li>");
+          const state = $(".location").append("<li>" + job.state + "</li>");
           const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
       });
     },
@@ -55,13 +55,13 @@ function loadData(data){
        "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
       const salary = $(".salary").append("<li>" + job.salary + "</li>");
       const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
-      const location = $(".location").append("<li>" + job.state + "</li>");
+      const state = $(".location").append("<li>" + job.state + "</li>");
       const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
   });
 }
 function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
-  const state = getUrlVars()["location"];
+  const state = getUrlVars()["state"];
   console.log('test');
   // if(jobTitle && state){
     let obj = {
@@ -95,20 +95,20 @@ function loadParams(){
   $("#searchForm").submit(function(event) {
     event.preventDefault();
     let search = "";
-    let jobTitle,location = "";
+    let jobTitle,state = "";
 
     if($("#jobTitle").val()){
       jobTitle = "jobTitle=" + $("#jobTitle").val();
     }
     if($("#location").val()){
-      location = "location=" + $("#location").val();
+      state = "state=" + $("#location").val();
     }
-    if(jobTitle && location){
-      search = "?" +jobTitle + "&" + location;
+    if(jobTitle && state){
+      search = "?" +jobTitle + "&" + state;
     }else if (jobTitle) {
       search = "?" +jobTitle;
     } else {
-      search = "?" +location;
+      search = "?" +state;
     }
       window.location.href = "/jobPosts" +search;
 

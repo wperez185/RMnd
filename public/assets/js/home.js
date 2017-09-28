@@ -2,20 +2,20 @@ $(function() {
   $("#searchForm").submit(function(event) {
     event.preventDefault();
     let search = "";
-    let jobTitle,location = "";
+    let jobTitle,state = "";
 
     if($("#jobTitle").val()){
       jobTitle = "jobTitle=" + $("#jobTitle").val();
     }
     if($("#location").val()){
-      location = "location=" + $("#location").val();
+      state = "state=" + $("#location").val();
     }
-    if(jobTitle && location){
-      search = "?" +jobTitle + "&" + location;
+    if(jobTitle && state){
+      search = "?" +jobTitle + "&" + state;
     }else if (jobTitle) {
       search = "?" +jobTitle;
     } else {
-      search = "?" +location;
+      search = "?" +state;
     }
       window.location.href = "/jobPosts" +search;
 
