@@ -12,41 +12,37 @@
   <div class="top-img">
     <img src="./img/logo3.JPG" class="data-logo" alt="RMnd logo">
     <div class="topnav" id="myTopnav">
-    <a href="/">Home</a>
-    <a href="/jobPosts">Find Jobs</a>
-    <a href="/contact">Career Resources</a>
-    <a href="/about">Company Profiles</a>
-    <!-- <a href="/profile" class="right">Settings</a> -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+      <a href="/">Home</a>
+      <a href="/jobPosts">Find Jobs</a>
+      <a href="/contact">Career Resources</a>
+      <a href="/about">Company Profiles</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
+  </div>
   <hr>
   <div class="profile-page container">
     <!-- page container start-->
     <div class="col-3 float-left" role="navigation">
       <!--col-3 float-left navigation start -->
       <nav class="profile-menu">
-        <h3 class="menu-header">User.username settings</h3>
+        <h3 class="menu-header">User profile settings</h3>
         <!-- menu items start -->
-        <ul class ="profile-left-menu">
-         <li>
-           <a href="/profile" class="js-selected-navigation-item selected menu-item" data-selected-links="avatar_settings /settings/profile">Profile</a>
-         </li>
-         <li>
-           <a href="/account" class="js-selected-navigation-item menu-item" data-selected-links=" /account">Account</a>
-         </li>
-       </ul>
+        <ul class="profile-left-menu">
+          <li>
+            <a href="/profile" class="js-selected-navigation-item selected menu-item" data-selected-links="avatar_settings /settings/profile">Profile</a>
+          </li>
+          <li>
+            <a href="/account" class="js-selected-navigation-item menu-item" data-selected-links=" /account">Account</a>
+          </li>
+        </ul>
         <!-- menu items end -->
       </nav>
-
     </div>
     <!--col-3 float-left navigation end -->
-
     <div class="float-left profile-left">
       <div class="subhead">
         <h2 class="subhead-heading">User profile</h2>
       </div>
-
       <!-- form -->
       <form class="columns uploadable-container" id="profile-form">
         <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
@@ -72,20 +68,14 @@
             <dt><label for="user_profile_email">Zipcode</label></dt>
             <dd> <input class="form-control" id="user_profile_zipcode" name="user[profile_zipcode]" size="30" type="text" placeholder="Enter your zipcode"></dd>
           </dl>
-
           <p><button type="submit" class="update-btn">Update profile</button></p>
         </div>
       </form>
-
-
-
-
     </div>
     <!-- col-9 float-left end -->
   </div>
   <!-- page container end-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- <script src="../js/app.js"></script> -->
   <script src="js/nav.js"></script>
   <script src="js/profile.js"></script>
   <script src="js/active.js"></script>

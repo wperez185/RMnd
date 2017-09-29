@@ -85,6 +85,8 @@ router.post('/login', jsonParser, (req, res) => {
     });
 });
 
+
+
 // Post to register a new user
 router.post('/', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password'];
@@ -166,10 +168,6 @@ router.post('/', jsonParser, (req, res) => {
   }
 
   let {username, password} = req.body;
-  // Username and password come in pre-trimmed, otherwise we throw an error
-  // before this
-  // firstName = firstName.trim();
-  // lastName = lastName.trim();
 
   return User
     .find({username})
@@ -207,10 +205,6 @@ router.post('/', jsonParser, (req, res) => {
     });
 });
 
-// Never expose all your users like below in a prod application
-// we're just doing this so we have a quick way to see
-// if we're creating users. keep in mind, you can also
-// verify this in the Mongo shell.
 router.get('/', (req, res) => {
   return User
     .find()

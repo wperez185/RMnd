@@ -1,13 +1,9 @@
 const {jobsApplied} = require("../models/jobsAppliedModels");
-// Not sure if jobPosts is needed here to reference for the data
-// const {jobPosts} = require("../models/jobPostsModels");
-
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 const express = require("express");
 const router = express.Router();
 const moment = require('moment');
-
 
 router.get('/', (req, res) => {
   jobsApplied
@@ -21,43 +17,6 @@ router.get('/', (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
-
-// router.get('/:state', (req, res) => {
-//   let state = req.params.state;
-//   jobPosts
-//     .find({state})
-//     .then(posts => {
-//       res.json(posts)
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
-// router.post('/filters', jsonParser, (req, res) => {
-//   let filters = {};
-//   if(req.body.state){
-//      filters.state = req.body.state;
-//   }
-//   if(req.body.city){
-//     filters.city = req.body.city;
-//   }
-//   if(req.body.zipcode){
-//     filters.zipcode = req.body.zipcode;
-//   }
-//   dataCollection
-//     .find(filters)
-//     .then(posts => {
-//       res.json(posts)
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
 
 router.post("/", jsonParser, (req, res) => {
   // ensure `name` and `budget` are in request body
@@ -81,15 +40,7 @@ router.post("/", jsonParser, (req, res) => {
       console.error(err);
       res.status(500).json({message: 'Internal server error'});
     });
-  // let today = moment().format();
-  // res.status(201).json(item);
 });
-
-// router.delete('/:id', (req, res) => {
-//   jobPosts.delete(req.params.id);
-//   console.log(`Deleted job post \`${req.params.id}\``);
-//   res.status(204).end();
-// });
 
 router.delete('/:id', (req, res) => {
   jobsApplied

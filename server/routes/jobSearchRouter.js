@@ -23,20 +23,6 @@ router.get('/', (req, res) => {
     });
 });
 
-// router.get('/:state', (req, res) => {
-//   let state = req.params.state;
-//   jobPosts
-//     .find({state})
-//     .then(posts => {
-//       res.json(posts)
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
 router.post('/filters', jsonParser, (req, res) => {
   let filters = {};
   if(req.body.jobTitle){
@@ -51,6 +37,7 @@ router.post('/filters', jsonParser, (req, res) => {
   if(req.body.zipcode){
     filters.zipcode = req.body.zipcode;
   }
+
   jobPosts
     .find(filters)
     .then(posts => {
@@ -91,15 +78,7 @@ router.post("/", jsonParser, (req, res) => {
       console.error(err);
       res.status(500).json({message: 'Internal server error'});
     });
-  // let today = moment().format();
-  // res.status(201).json(item);
 });
-
-// router.delete('/:id', (req, res) => {
-//   jobPosts.delete(req.params.id);
-//   console.log(`Deleted job post \`${req.params.id}\``);
-//   res.status(204).end();
-// });
 
 router.delete('/:id', (req, res) => {
   jobPosts

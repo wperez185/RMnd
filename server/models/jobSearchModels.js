@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-
-// this is our schema to represent a restaurant
 const jobPostsSchema = mongoose.Schema({
   jobTitle: {type: String, required: true},
   description: {type: String, required: true},
@@ -12,9 +10,6 @@ const jobPostsSchema = mongoose.Schema({
   postedDate: {type: Date}
 });
 
-
-// note that all instance methods and virtual properties on our
-// schema must be defined *before* we make the call to `.model`.
 const jobPosts = mongoose.model('jobPosts', jobPostsSchema);
 
 module.exports = {jobPosts};

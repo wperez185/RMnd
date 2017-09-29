@@ -41,9 +41,6 @@ function loadParams(){
   }
   loadParams();
 
-
-  // console.log(getUrlVars()["jobTitle"]);
-
   $("#searchForm").submit(function(event) {
     event.preventDefault();
     let search = "";
@@ -64,18 +61,6 @@ function loadParams(){
     }
       window.location.href = "/jobPosts" +search;
 
-    // $.ajax({
-    //   url: '/api/jobSearch',
-    //   contentType: 'application/json',
-    //   type: 'get',
-    //   dataType: "json",
-    //   crossdomain: true,
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*"
-    //   },
-    //   success: function(data) {
-    //     console.log(data);
-    //   }
   });
 
   $("#searchForm").submit(function(event){

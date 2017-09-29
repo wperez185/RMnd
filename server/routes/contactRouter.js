@@ -5,7 +5,6 @@ const express = require("express");
 const router = express.Router();
 const moment = require('moment');
 
-
 router.get('/', (req, res) => {
   contact
     .find()
@@ -18,7 +17,6 @@ router.get('/', (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
-
 
 router.post("/", jsonParser, (req, res) => {
   // ensure `name` and `budget` are in request body
@@ -45,12 +43,7 @@ router.post("/", jsonParser, (req, res) => {
       console.error(err);
       res.status(500).json({message: 'Internal server error'});
     });
-  // let today = moment().format();
-  // res.status(201).json(item);
-
 });
-
-
 
 router.delete('/:id', (req, res) => {
   contact
@@ -64,6 +57,5 @@ router.delete('/:id', (req, res) => {
       res.status(500).json({error: 'something went terribly wrong'});
     });
 });
-
 
 module.exports = router;

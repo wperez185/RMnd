@@ -10,11 +10,6 @@ $(function(){
   const city = $("#city").val();
   const state = $("#state").val();
   const zipcode = $("#zipcode").val();
-  // const fullTime = $(".full-time").val();
-  // const partTime = $(".part-time").val();
-  // const internship = $(".internship").val();
-  // const contract = $(".contract").val();
-  // const temporary = $(".temporary").val();
   let obj = {
     company: companyName,
     jobTitle: jobTitle,

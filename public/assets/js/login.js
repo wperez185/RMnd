@@ -27,7 +27,6 @@ $(function(){
         localStorage.setItem("RMnd-user", user);
         window.location.href = "/jobPosts";
       }
-      // ${localStorage.getItem("RMnd-user")}
       },
       error: function(err) {
         console.log(err);
@@ -37,8 +36,50 @@ $(function(){
 });
 
 
-// if(user == username ){
-//   $("topnav").addClass("right");
+// working progress with Toastr
+// $(document).ready(function() {
+//     toastr.options.timeOut = 1500; // 1.5s
+//     toastr.info('Page Loaded!');
+//     $('#linkButton').click(function() {
+//        toastr.success('Click Button');
+//     });
+//   });
+
+// $(document).ready(function() {
+//   toastr["error"]("Clear itself?<br /><br /><button type="button" class="btn clear">Yes</button>")
+//
+//   toastr.options = {
+//     "closeButton": true,
+//     "debug": false,
+//     "newestOnTop": false,
+//     "progressBar": false,
+//     "positionClass": "toast-top-center",
+//     "preventDuplicates": false,
+//     "onclick": null,
+//     "showDuration": "300",
+//     "hideDuration": "1000",
+//     "timeOut": 0,
+//     "extendedTimeOut": 0,
+//     "showEasing": "swing",
+//     "hideEasing": "linear",
+//     "showMethod": "fadeIn",
+//     "hideMethod": "fadeOut",
+//     "tapToDismiss": false
+//   }
+//   });
+$(function () {
+    // $('#error').click(function () {
+    //     toastr.error("Noooo oo oo ooooo!!!", "Title", {
+    //         "timeOut": "0",
+    //         "extendedTImeout": "0"
+    //     });
+    // });
+    toastr.error('Incorrect username and or password')
+  });
+
+//
+// if(user != username && password != password ){
+//   $("error-msg").addClass("right");
 // }else {
 //   $("topnav").addClass("settings");
 // }
