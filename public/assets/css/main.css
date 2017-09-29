@@ -90,7 +90,7 @@ ul {
 .button {
   background-color: #007bff;
   border: none;
-  color: white;
+  color: #fff;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -323,6 +323,10 @@ ul.job-post {
 #resume-help {
   margin-top: 5px;
 }
+.home-search {
+  background-color: #333;
+  color: #fff;
+}
 @media (min-width: 769px) and (max-width : 920px) {
 .content {
   margin-top: 40px;
@@ -391,7 +395,7 @@ ul.job-post {
   padding: 10px;
   font-size: 16px;
   background: #333;
-  color: white;
+  color: #fff;
 }
 
 @media (min-width: 769px) and (max-width : 920px) {
@@ -505,7 +509,7 @@ ul.job-post {
   position: relative;
   z-index: 1;
   top: 125px;
-  color: white;
+  color: #fff;
 }
 .header-content h1 {
   font-size: 30px;
@@ -813,7 +817,7 @@ form#signInForm {
    margin: 0 auto;
    font-size: 18px;
    background: #333;
-   color: white;
+   color: #fff;
    display: block;
   cursor: pointer;
 }
@@ -962,6 +966,8 @@ form#signInForm {
 }
 .admin-update-btn {
   margin-bottom: 5px;
+  background-color: #333;
+  color: #fff;
 }
 .clearfix::before {
   display: table;
@@ -1060,7 +1066,7 @@ dl {
   background: #ebebea;
 }
 .top-img {
-  background: white;
+  background: #fff;
   display: flex;
   align-items: center;
 }
@@ -1121,7 +1127,7 @@ dl {
 }
 
 #job-list {
-  background: white;
+  background: #fff;
 }
 .data-main p {
   margin-left: 0;
@@ -1135,7 +1141,7 @@ dl {
   font-size: 16px;
   background: #333;
   margin-bottom: 10px;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 .data-btn {
@@ -1144,7 +1150,7 @@ dl {
   font-size: 18px;
   background: #333;
   margin-bottom: 10px;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 .settings-btn {
@@ -1152,7 +1158,7 @@ dl {
   padding: 10px;
   font-size: 16px;
   background: #333;
-  color: white;
+  color: #fff;
   float: right;
   cursor: pointer;
 }
@@ -1283,7 +1289,7 @@ fieldset {
   margin: 0 auto;
   font-size: 16px;
   background: #333;
-  color: white;
+  color: #fff;
 }
 #contact input:focus, #contact textarea:focus {
   outline: 0;
@@ -1369,7 +1375,7 @@ fieldset {
   width: 33%;
   border-radius: 8%;
   padding-left: 5px;
-  background: white;
+  background: #fff;
   border: 1px solid darkgrey;
 }
 .home-location {
@@ -1380,7 +1386,7 @@ fieldset {
   width: 36%;
   border-radius: 8%;
   padding-left: 5px;
-  background: white;
+  background: #fff;
   border: 1px solid darkgrey;
 }
 .data-location {
