@@ -53,34 +53,20 @@ function loadParams(){
   }
   loadParams();
 
-  $("#searchForm, #dataSearchForm").submit(function(event) {
+  $("#dataSearchForm").submit(function(event){
     event.preventDefault();
-    let search = "";
-    let jobTitle,state = "";
-
-    if($("#jobTitle").val()){
-      jobTitle = "jobTitle=" + $("#jobTitle").val();
-    }
-    if($("#location").val()){
-      state = "state=" + $("#location").val();
-    }
-    if(jobTitle && state){
-      search = "?" +jobTitle + "&" + state;
-    }else if (jobTitle) {
-      search = "?" +jobTitle;
-    } else {
-      search = "?" +state;
-    }
-      window.location.href = "/jobPosts" +search;
-  });
-
-  $("#searchForm, #dataSearchForm").submit(function(event){
-    event.preventDefault();
-  const jobTitle = $("#jobTitle").val();
-  const state = $("#location :selected").text();
-  let obj = {
-    state
-  };
+  let jobTitle = $("#dataJobTitle").val();
+  console.log(jobTitle);
+  let state = $("#location :selected").val();
+  let obj = {}
+  if(jobTitle && state){
+    obj.state = state;
+    obj.jobTitle = jobTitle;
+  }else if (jobTitle) {
+    obj.jobTitle = jobTitle;
+  } else if (state){
+    obj.state = state;
+  }
   console.log(obj);
   $.ajax({
     url: `/api/jobSearch/filters`,
@@ -94,6 +80,7 @@ function loadParams(){
     },
     success: function(data) {
     console.log(data);
+    loadData(data);
     },
     error: function(err) {
       console.log(err);

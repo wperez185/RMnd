@@ -25,6 +25,7 @@ router.get('/', (req, res) => {
 
 router.post('/filters', jsonParser, (req, res) => {
   let filters = {};
+  console.log(req.body);
   if(req.body.jobTitle){
      filters.jobTitle = req.body.jobTitle;
   }
