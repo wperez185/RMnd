@@ -25,6 +25,9 @@ $(function(){
     },
     success: function(data) {
     console.log(data);
+    toastr.options.closeButton = true;
+    toastr.options.timeOut = 0;
+    toastr.success('Your message was sent successfully')
     },
     error: function(err) {
       console.log(err);
