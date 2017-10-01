@@ -58,9 +58,36 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/nav.js"></script>
-  <script src="js/jobSearch.js"></script>
   <script src="js/active.js"></script>
   <script src="js/states.js"></script>
+
+<script>
+$(function() {
+$("#searchForm").submit(function(event) {
+  event.preventDefault();
+  let search = "";
+  let jobTitle,state = "";
+
+  if($("#jobTitle").val()){
+    jobTitle = "jobTitle=" + $("#jobTitle").val();
+  }
+  if($("#location").val()){
+    state = "location=" + $("#location").val();
+  }
+  if(jobTitle && state){
+    search = "?" +jobTitle + "&" + state;
+  }else if (jobTitle) {
+    search = "?" +jobTitle;
+  } else {
+    search = "?" +state;
+  }
+    window.location.href = "/jobPosts" +search;
+
+});
+});
+</script>
+
 </body>
+
 
 </html>

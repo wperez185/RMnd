@@ -28,9 +28,14 @@ $(function(){
     toastr.options.closeButton = true;
     toastr.options.timeOut = 0;
     toastr.success('Your message was sent successfully')
+    $("#contact")[0].reset();
+    // window.location.href = "/contact";
     },
     error: function(err) {
       console.log(err);
+      toastr.options.closeButton = true;
+      toastr.options.timeOut = 0;
+      toastr.error('Error sending your message. Please try again')
     }
   })
   });

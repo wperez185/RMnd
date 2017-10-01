@@ -4,8 +4,9 @@ $(function(){
 
   console.log(JSON.stringify(obj));
   // return false;
+     let userId = localStorage.getItem("RMnd-user");
   $.ajax({
-    url: '/api/account',
+    url: `/api/users/${userId}`,
     contentType: 'application/json',
     type: 'delete',
     data: JSON.stringify(obj),

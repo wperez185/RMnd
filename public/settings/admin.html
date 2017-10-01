@@ -59,7 +59,7 @@
           <dd><input class="form-control form-control" id="user_confirm_new_password" name="user[password_confirmation]" required tabindex="2" type="password"></dd>
         </dl>
         <p>
-          <div class="admin-update-btn-div"><button type="submit" class="admin-update-btn">Update profile</button></div>
+          <div class="admin-update-btn-div"><button type="submit" class="admin-update-btn">Update password</button></div>
           <span><a href="/password_reset">Forgot password</a></span>
         </p>
       </form>
@@ -70,7 +70,7 @@
       <div class="delete_account_p">
         <p>Are you certain you want to delete your account?</p>
 
-        <button class="delete-account"><a href="#delete_account_confirmation" rel="facebox[.dangerzone]" class="btn btn-danger" tabindex="4">Delete your account</a></button>
+        <button class="delete-account"><a href="#" rel="facebox[.dangerzone]" class="btn btn-danger" "delete-account" tabindex="4">Delete your account</a></button>
       </div>
     </div>
     <!-- col-9 float-left end -->
@@ -78,8 +78,34 @@
   <!-- page container-fluid end-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/nav.js"></script>
-  <script src="js/delete.js"></script>
   <script src="js/active.js"></script>
+  <script>
+    $(function(){
+      $(".delete-account").click(function(event) {
+        event.preventDefault();
+
+         let userId = localStorage.getItem("RMnd-user");
+      $.ajax({
+        url: `/api/users/${userId}`,
+        contentType: 'application/json',
+        type: 'delete',
+        dataType: "json",
+        crossdomain: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },
+        success: function(data) {
+          window.location.href = "/";
+        console.log(data);
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      })
+      });
+    });
+
+  </script>
 </body>
 
 </html>

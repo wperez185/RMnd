@@ -253,7 +253,7 @@ router.put('/:id', jsonParser, (req, res) => {
     obj.city = req.body.city;
   }
   if(req.body.state){
-    obj.statte = req.body.state;
+    obj.state = req.body.state;
   }
   if(req.body.zipcode){
     obj.zipcode = req.body.zipcode;
