@@ -5,8 +5,43 @@ const passport = require('passport');
 const {User} = require("../models/usersModels");
 
 const router = express.Router();
-
+const {sendEmail} = require('../utilities/emailer');
 const jsonParser = bodyParser.json();
+const uuidv4 = require('uuid/v4');
+
+router.post('/:confirmationGUID', jsonParser, (req, res) => {
+
+})
+
+router.post('/forgotPassword/:userId', jsonParser, (req, res) => {
+    let userId = req.params.userId;
+    let confirmationGUID = uuidv4();
+    return User
+      .findOneAndUpdate({_id:userId}, {$set:{confirmationGUID}}, {new: true})
+      .then(results => {
+        if(results){
+          let url = "http://localhost:8080/resetPassword?q=" + confirmationGUID;
+          let html = `<p>Please click on the following link to reset your password:
+             <a href=${url}>Click Here</a></p>`;
+             let to = results.email;
+             let from = "willthinkful@gmail.com";
+             let subject = "Reset password";
+             sendEmail(from, to, subject, html);
+        }
+        console.log(results);
+        res.status(201).json({success:true});
+      })
+
+      .catch(err => {
+        // Forward validation errors on to the client, otherwise give a 500
+        // error because something unexpected has happened
+        if (err.reason === 'ValidationError') {
+          return res.status(err.code).json(err);
+        }
+        res.status(500).json({code: 500, message: 'Internal server error'});
+      });
+
+})
 
 router.post('/login', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password'];

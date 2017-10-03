@@ -64,4 +64,4 @@ for(var key in states){
   html += `<option value='${key}'> ${states[key]} </option>`;
 }
 
-$('#location, #dataLocation').html(html);
+$('#location, #dataLocation, #user_profile_state').html(html);
