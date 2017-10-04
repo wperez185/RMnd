@@ -1,5 +1,4 @@
 $(function() {
-  const jobsPerPage = 10;
   function getUrlVars()
 {
     var vars = [], hash;
@@ -13,7 +12,6 @@ $(function() {
     return vars;
 }
 function loadData(data){
-  // First, update the job list with all the jobs
   const jobList = $("#job-list");
   jobList.html(" ");
   data.forEach(function (job) {
@@ -25,26 +23,29 @@ function loadData(data){
       const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
   });
 
-  // Then, update the pagination based on the number of pages
+      // my code
+
+
+  const jobsPerPage = 10;
   let numPages = Math.ceil(data.length / jobsPerPage);
   let newPagination = '';
   for (let i = 1; i <= numPages; i++) {
     newPagination += '<a href="#">' + i + '</a>';
   }
+  console.log(newPagination);
+  console.log(jobsPerPage);
   $('.pagination').html(newPagination);
 
-  // Show the first page of jobs by default
   let page = 1;
-  // Hide of all of the jobs…
   $(".job-post > li").css("display", "none");
-  // Except the ones on the selected page
+
   let start = jobsPerPage * (page - 1);
   let end   = jobsPerPage * page;
   $(".job-post > li").slice(start, end).css("display", "block");
-  // Reset "active" for all pagination…
-  // Except the current button (set that as "active")
   $('.pagination > a').first().addClass('active');
 }
+
+
 function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
   const state = getUrlVars()["state"];
@@ -110,33 +111,18 @@ function loadParams(){
   })
 });
 
-  // This will only handle pagination links on the page _right now_. As soon as the pagination is updated, the click handling is lost.
-  // $('.pagination > a').on('click', function(event) {
+    // my code
 
-  // Instead, listen for clicks on the body but only handle the ones on pagination links
-  $('body').on('click', '.pagination > a', function(event) {
-    event.preventDefault();
-
-    // Get the page #
-    let page = $(this).text();
-
-    // Bonus: If this is a prev/next button get the current page (i.e., the currently active button) and go to that page +- 1
-    // if (...) {
-    //   let current = $('.pagination > a.active').text();
-    //   page = current - 1;
-    //   page = current + 1;
-    // }
-
-    // Show the new page
-    // Hide of all of the jobs…
-    $(".job-post > li").css("display", "none");
-    // Except the ones on the selected page
-    let start = jobsPerPage * (page - 1);
-    let end   = jobsPerPage * page;
-    $(".job-post > li").slice(start, end).css("display", "block");
-    // Reset "active" for all pagination…
-    // Except the current button (set that as "active")
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-  });
+  // $('body').on('click', '.pagination > a', function(event) {
+  //   event.preventDefault();
+  //
+  //   let page = $(this).text();
+  //
+  //   $(".job-post > li").css("display", "none");
+  //   let start = jobsPerPage * (page - 1);
+  //   let end   = jobsPerPage * page;
+  //   $(".job-post > li").slice(start, end).css("display", "block");
+  //   $(this).siblings().removeClass('active');
+  //   $(this).addClass('active');
+  // });
 });
