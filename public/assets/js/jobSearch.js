@@ -13,30 +13,42 @@ $(function() {
     return vars;
 }
 function loadData(data){
+  // First, update the job list with all the jobs
   const jobList = $("#job-list");
   jobList.html(" ");
-  data.forEach(function(job, index) {
-    // console.log(index);
+  data.forEach(function (job) {
       $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + "<p class='money-sign'>" + "$" + "</p>" + job.salary + "</span>" +
-       "<span>" + job.postedDate + "</span>" + "<button class='apply-btn'>" + "Apply</button>" + "</li>" + "<hr>");
+       "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
       const salary = $(".salary").append("<li>" + job.salary + "</li>");
       const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
       const state = $(".location").append("<li>" + job.state + "</li>");
       const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
   });
-  let numPages = Math.ceil(data.length / jobsPerPage)
-  let newPagination = ""
-  for(let i = 1; i <= numPages; i++){
+
+  // Then, update the pagination based on the number of pages
+  let numPages = Math.ceil(data.length / jobsPerPage);
+  let newPagination = '';
+  for (let i = 1; i <= numPages; i++) {
     newPagination += '<a href="#">' + i + '</a>';
   }
-  console.log(numPages);
-  console.log(newPagination);
-  $(".pagination").html(newPagination)
+  $('.pagination').html(newPagination);
+
+  // Show the first page of jobs by default
+  let page = 1;
+  // Hide of all of the jobs…
+  $(".job-post > li").css("display", "none");
+  // Except the ones on the selected page
+  let start = jobsPerPage * (page - 1);
+  let end   = jobsPerPage * page;
+  $(".job-post > li").slice(start, end).css("display", "block");
+  // Reset "active" for all pagination…
+  // Except the current button (set that as "active")
+  $('.pagination > a').first().addClass('active');
 }
 function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
   const state = getUrlVars()["state"];
-  // console.log('test');
+  console.log('test');
   // if(jobTitle && state){
     let obj = {
       state
@@ -52,7 +64,7 @@ function loadParams(){
         "Access-Control-Allow-Origin": "*"
       },
       success: function(data) {
-      // console.log(data);
+      console.log(data);
       loadData(data);
       },
       error: function(err) {
@@ -97,13 +109,34 @@ function loadParams(){
     }
   })
 });
-$('body').on('click', '.pagination > a ', function(event){
-  event.preventDefault();
-  let page = $(this).text();
-  $(".job-post > li").css("display", "none");
-  let jobsPerPage = 10;
-  let start = jobsPerPage * (page - 1);
-  let end = jobsPerPage * page;
-  $(".job-post > li").slice(start, end).css("display", "block");
-})
+
+  // This will only handle pagination links on the page _right now_. As soon as the pagination is updated, the click handling is lost.
+  // $('.pagination > a').on('click', function(event) {
+
+  // Instead, listen for clicks on the body but only handle the ones on pagination links
+  $('body').on('click', '.pagination > a', function(event) {
+    event.preventDefault();
+
+    // Get the page #
+    let page = $(this).text();
+
+    // Bonus: If this is a prev/next button get the current page (i.e., the currently active button) and go to that page +- 1
+    // if (...) {
+    //   let current = $('.pagination > a.active').text();
+    //   page = current - 1;
+    //   page = current + 1;
+    // }
+
+    // Show the new page
+    // Hide of all of the jobs…
+    $(".job-post > li").css("display", "none");
+    // Except the ones on the selected page
+    let start = jobsPerPage * (page - 1);
+    let end   = jobsPerPage * page;
+    $(".job-post > li").slice(start, end).css("display", "block");
+    // Reset "active" for all pagination…
+    // Except the current button (set that as "active")
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
 });
