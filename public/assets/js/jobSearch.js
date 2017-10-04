@@ -1,4 +1,5 @@
 $(function() {
+  const jobsPerPage = 10;
   function getUrlVars()
 {
     var vars = [], hash;
@@ -16,7 +17,7 @@ function loadData(data){
   jobList.html(" ");
   data.forEach(function (job) {
       $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + "<p class='money-sign'>" + "$" + "</p>" + job.salary + "</span>" +
-       "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
+       "<span>" + job.postedDate + "</span>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>" + "</li>");
       const salary = $(".salary").append("<li>" + job.salary + "</li>");
       const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
       const state = $(".location").append("<li>" + job.state + "</li>");
@@ -113,16 +114,16 @@ function loadParams(){
 
     // my code
 
-  // $('body').on('click', '.pagination > a', function(event) {
-  //   event.preventDefault();
-  //
-  //   let page = $(this).text();
-  //
-  //   $(".job-post > li").css("display", "none");
-  //   let start = jobsPerPage * (page - 1);
-  //   let end   = jobsPerPage * page;
-  //   $(".job-post > li").slice(start, end).css("display", "block");
-  //   $(this).siblings().removeClass('active');
-  //   $(this).addClass('active');
-  // });
+  $('body').on('click', '.pagination > a', function(event) {
+    event.preventDefault();
+
+    let page = $(this).text();
+
+    $(".job-post > li").css("display", "none");
+    let start = jobsPerPage * (page - 1);
+    let end   = jobsPerPage * page;
+    $(".job-post > li").slice(start, end).css("display", "block");
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
 });
