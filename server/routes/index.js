@@ -38,4 +38,12 @@ router.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname, "../..", "public/about.html"))
 })
 
+router.get("/forgotPassword", (req, res) => {
+  res.sendFile(path.join(__dirname, "../..", "public/forgotPassword.html"))
+})
+
+router.get("/resetPassword", (req, res) => {
+  res.sendFile(path.join(__dirname, "../..", "public/resetPassword.html"))
+})
+
 module.exports = router;

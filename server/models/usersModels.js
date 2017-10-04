@@ -18,7 +18,8 @@ const UserSchema = mongoose.Schema({
   city: {type: String},
   state: {type: String},
   zipcode: {type: String},
-  confirmationGUID: {type: String}
+  confirmationGUID: {type: String},
+  email: {type: String}
 });
 
 UserSchema.methods.apiRepr = function() {

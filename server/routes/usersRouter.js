@@ -13,13 +13,15 @@ router.post('/:confirmationGUID', jsonParser, (req, res) => {
 
 })
 
-router.post('/forgotPassword/:userId', jsonParser, (req, res) => {
-    let userId = req.params.userId;
+router.post('/forgotPassword/:username', jsonParser, (req, res) => {
+    let username = req.params.username;
     let confirmationGUID = uuidv4();
     return User
-      .findOneAndUpdate({_id:userId}, {$set:{confirmationGUID}}, {new: true})
+      .findOneAndUpdate({username}, {$set:{confirmationGUID}}, {new: true})
       .then(results => {
-        if(results){
+        console.log(results);
+        console.log(results.email);
+        if(results && results.email){
           let url = "http://localhost:8080/resetPassword?q=" + confirmationGUID;
           let html = `<p>Please click on the following link to reset your password:
              <a href=${url}>Click Here</a></p>`;
@@ -27,9 +29,13 @@ router.post('/forgotPassword/:userId', jsonParser, (req, res) => {
              let from = "willthinkful@gmail.com";
              let subject = "Reset password";
              sendEmail(from, to, subject, html);
+             res.status(201).json({success:true});
+             console.log(success);
+
+        }else {
+          res.status(401).json({success:false});
         }
-        console.log(results);
-        res.status(201).json({success:true});
+        // console.log(results);
       })
 
       .catch(err => {
@@ -41,6 +47,35 @@ router.post('/forgotPassword/:userId', jsonParser, (req, res) => {
         res.status(500).json({code: 500, message: 'Internal server error'});
       });
 
+})
+
+
+router.post('/resetPassword/:guid', jsonParser, (req, res) => {
+    let guid = req.params.guid;
+    let password = req.body.password;
+    console.log(guid);
+    return User.hashPassword(password)
+    .then(hash => {
+      return User
+        .findOneAndUpdate({confirmationGUID: guid}, {$set:{password: hash}}, {new: true})
+    })
+      .then(results => {
+        console.log(results);
+        if(results){
+            res.status(201).json({success:true});
+        }else {
+          res.status(401).json({success:false});
+        }
+        // console.log(results);
+      })
+      .catch(err => {
+        // Forward validation errors on to the client, otherwise give a 500
+        // error because something unexpected has happened
+        if (err.reason === 'ValidationError') {
+          return res.status(err.code).json(err);
+        }
+        res.status(500).json({code: 500, message: 'Internal server error'});
+      });
 })
 
 router.post('/login', jsonParser, (req, res) => {
