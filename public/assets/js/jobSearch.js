@@ -1,4 +1,5 @@
 $(function() {
+  const jobsPerPage = 10;
   function getUrlVars()
 {
     var vars = [], hash;
@@ -14,19 +15,28 @@ $(function() {
 function loadData(data){
   const jobList = $("#job-list");
   jobList.html(" ");
-  data.forEach(function (job) {
+  data.forEach(function(job, index) {
+    // console.log(index);
       $("#job-list").append("<li>" + job.jobTitle + "<span>" + job.description + "</span>"  + "<span>" + job.city + "</span>" + "<span>" + job.state + "</span>" + "<span>" + job.zipcode + "</span>" + "<span>" + "<p class='money-sign'>" + "$" + "</p>" + job.salary + "</span>" +
-       "<span>" + job.postedDate + "</span>" + "</li>" + "<button class='apply-btn'>" + "Apply</button>" + "<hr>");
+       "<span>" + job.postedDate + "</span>" + "<button class='apply-btn'>" + "Apply</button>" + "</li>" + "<hr>");
       const salary = $(".salary").append("<li>" + job.salary + "</li>");
       const jobTitle = $(".job-title").append("<li>" + job.jobTitle + "</li>");
       const state = $(".location").append("<li>" + job.state + "</li>");
       const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
   });
+  let numPages = Math.ceil(data.length / jobsPerPage)
+  let newPagination = ""
+  for(let i = 1; i <= numPages; i++){
+    newPagination += '<a href="#">' + i + '</a>';
+  }
+  console.log(numPages);
+  console.log(newPagination);
+  $(".pagination").html(newPagination)
 }
 function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
   const state = getUrlVars()["state"];
-  console.log('test');
+  // console.log('test');
   // if(jobTitle && state){
     let obj = {
       state
@@ -42,7 +52,7 @@ function loadParams(){
         "Access-Control-Allow-Origin": "*"
       },
       success: function(data) {
-      console.log(data);
+      // console.log(data);
       loadData(data);
       },
       error: function(err) {
@@ -87,4 +97,13 @@ function loadParams(){
     }
   })
 });
+$('body').on('click', '.pagination > a ', function(event){
+  event.preventDefault();
+  let page = $(this).text();
+  $(".job-post > li").css("display", "none");
+  let jobsPerPage = 10;
+  let start = jobsPerPage * (page - 1);
+  let end = jobsPerPage * page;
+  $(".job-post > li").slice(start, end).css("display", "block");
+})
 });
