@@ -1427,3 +1427,14 @@ input#userName {
 i.fa.fa-key {
   font-size: 50px;
 }
+#resetPasswordForm {
+  text-align: center;
+}
+#password {
+  display: block;
+  margin-left: 30%;
+}
+#confirm-password {
+  display: block;
+  margin-left: 30%;
+}
