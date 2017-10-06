@@ -43,7 +43,7 @@
       <div class="subhead">
         <h2 class="subhead-heading">Change password</h2>
       </div>
-      <form accept-charset="UTF-8" action="/account" class="edit_user" id="change_password" method="post">
+      <form class="edit_user" id="change_password">
         <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="m3XIGIZyc8kFDrjfmod4d6s0iYMlIugXnDGtAXZaGTgTdKyUK+czTeWvZnm8RaoTSDZ5ZhkOepTX624YZab/pA=="></div>
         <dl class="form-group password-confirmation-form">
           <dt><label for="user_old_password">Old password</label></dt>
@@ -95,6 +95,35 @@
         },
         success: function(data) {
           window.location.href = "/";
+        console.log(data);
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      })
+      });
+    });
+
+
+    $(function() {
+      $("#change_password").submit(function(event) {
+      const oldPassword = $("#user_old_password").val();
+      const userPassword = $("#user_new_password").val();
+      let obj = {
+        password: userPassword
+      };
+      console.log(JSON.stringify(obj));
+      $.ajax({
+        url: '/api/users',
+        contentType: 'application/json',
+        type: 'post',
+        data: JSON.stringify(obj),
+        dataType: "json",
+        crossdomain: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },
+        success: function(data) {
         console.log(data);
         },
         error: function(err) {
