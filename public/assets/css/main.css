@@ -829,6 +829,18 @@ form#signInForm {
    display: block;
   cursor: pointer;
 }
+#signUpForm {
+  text-align: center;
+}
+#signup-user-icon {
+  font-size: 16px;
+}
+#signup-password-icon {
+  font-size: 16px;
+}
+#error {
+  color: red;
+}
 @media (min-width : 480px) and (max-width : 575px){
 .signup-page {
   width: 80%;
@@ -1431,10 +1443,8 @@ i.fa.fa-key {
   text-align: center;
 }
 #password {
-  display: block;
-  margin-left: 30%;
+  display: inline-block;
 }
 #confirm-password {
-  display: block;
-  margin-left: 30%;
+  display: inline-block;
 }

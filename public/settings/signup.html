@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href=" ../css/main.css">
   <title>RMnd</title>
 </head>
@@ -32,15 +34,19 @@
         <div class="row">
           <div class="col-lg-12">
             <div id="signUpBox">
-              <div class="form-label"> <label>UserName
+              <span id="error">  </span>
+              <div class="form-label">
+                <i class="fa fa-user" id="signup-user-icon" aria-hidden="true"></i>
                       <input id="newUser" type="text" name="username" required/>
-                    </label></div>
-              <div class="form-label"> <label>Password
+                    </div>
+              <div class="form-label">
+                <i class="fa fa-key" id="signup-password-icon" aria-hidden="true"></i>
                       <input id="newPassword" type="password" required/>
-                    </label></div>
-              <div class="form-label"> <label>Confirm password
+                    </div>
+              <div class="form-label">
+                <i class="fa fa-key" id="signup-password-icon" aria-hidden="true"></i>
                       <input id="confirmPassword" type="password" required/>
-                    </label></div>
+                    </div>
               <div class="signup-class-btn"><button class="signup-btn">Sign Up</button></div>
       </form>
       </div>
@@ -53,6 +59,7 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="js/nav.js"></script>
       <script src="js/signup.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </body>
 
 </html>

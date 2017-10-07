@@ -19,10 +19,19 @@ $(function() {
     },
     success: function(data) {
     console.log(data);
-    },
-    error: function(err) {
-      console.log(err);
-    }
+    window.location.href = '/profile';
+    $("#profile")[0].reset();
+  },
+  statusCode: {
+   422: function(err) {
+     console.log($("#error"))
+     $("#error").text("Username already exists.")
+   },
+
+   error: function(){
+      // $("#error").text("Username already exists.")
+   }
+ }
   })
   });
 });
