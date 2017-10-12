@@ -13,7 +13,7 @@ const index = require("./server/routes/index");
 const path = require("path");
 // const {router: usersRouter} = require('./users');
 // const {router: authRouter, basicStrategy, jwtStrategy} = require('./auth');
-
+const session = require("express-session");
 mongoose.Promise = global.Promise;
 
 
@@ -35,6 +35,15 @@ app.use(function (req, res, next) {
   }
   next();
 });
+
+app.use(session({
+ secret: '945575d5-62f7-41f7-8e16-50e4e52fe725',
+ resave: false,
+ saveUninitialized: true,
+ cookie: {
+   secure: false
+ }
+}));
 
 app.use(passport.initialize());
 // passport.use(basicStrategy);

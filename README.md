@@ -10,4 +10,28 @@
 
 Are you looking for a job? Well here you can browse for jobs in different states for a job that suits your needs. You can also create a username to modify your user account or even delete your username if you do not want one anymore.
 
+<h1>User Login</h1>
+username: user1
+<br>
+password: test
+
+Or you can signup and create your own username and password.
+
+<h1>Getting started</h1>
+<hr>
+<h2>Install</h2>
+<br>
+git clone git@github.com:wperez185/RMnd.git
+<br>
+cd RMnd
+<br>
+npm install
+
+<h1>Launch</h1>
+mongod
+<br>
+Open another tab in terminal and type nodemon server
+
+Open web browser to http://localhost:8080
+
 You can find a live version of this site https://intense-harbor-59701.herokuapp.com/
