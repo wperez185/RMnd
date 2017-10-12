@@ -23,10 +23,8 @@ function loadData(data){
       const state = $(".location").append("<li>" + job.state + "</li>");
       const jobType = $(".job-type").append("<li>" + job.jobType + "</li>");
   });
-
-      // my code
-
-
+  const jobData = data.length;
+  console.log(jobData);
   const jobsPerPage = 10;
   let numPages = Math.ceil(data.length / jobsPerPage);
   let newPagination = '';
