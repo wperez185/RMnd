@@ -55,7 +55,16 @@ button {
   margin-top: 5px;
   cursor: pointer;
 }
-
+a.btn.btn-lg.right {
+  color: white;
+}
+a.btn.btn-lg.right:hover {
+    background-color: #ddd;
+    color: black;
+}
+.hidden {
+  display: none !important;
+}
 .nav {
   display: inline-block;
   margin-right: 30px;
@@ -1399,11 +1408,11 @@ fieldset {
   border: 1px solid darkgrey;
 }
 .home-location {
-  width: 33%;
+  width: 50%;
   height: 26px;
 }
 #dataJobTitle {
-  width: 36%;
+  width: 60%;
   border-radius: 8%;
   padding-left: 5px;
   background: #fff;
