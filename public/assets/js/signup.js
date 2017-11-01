@@ -1,5 +1,6 @@
 $(function() {
   $("#signUpForm").submit(function(event) {
+    event.preventDefault();
   const userInfo = $("#newUser").val();
   const userPassword = $("#newPassword").val();
   let obj = {

@@ -26,7 +26,7 @@ $(function(){
      })
   }
   $("#profile-form").submit(function(event){
-    event.preventDefault;
+    event.preventDefault();
     let userId = localStorage.getItem("RMnd-user");
     let firstName = $("#user_profile_name").val();
     let lastName =  $("#user_profile_last_name").val();

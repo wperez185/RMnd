@@ -25,6 +25,7 @@ signUp.onclick = function(e){
 
 $(function() {
   $("#signUpForm").submit(function(event) {
+    event.preventDefault();
   const userInfo = $("#newUser").val();
   const userPassword = $("#newPassword").val();
   let obj = {
@@ -52,6 +53,7 @@ $(function() {
   });
 
   $("#signUpForm").submit(function(event) {
+    event.preventDefault();
   const userLogin = $("#userName").val();
   const userLoginPassword = $("#userPassword").val();
   let obj = {

@@ -27,7 +27,7 @@ router.post('/filters', jsonParser, (req, res) => {
   let filters = {};
   console.log(req.body);
   if(req.body.jobTitle){
-     filters.jobTitle = req.body.jobTitle;
+     filters.jobTitle = { '$regex': req.body.jobTitle }
   }
   if(req.body.state){
      filters.state = req.body.state;
