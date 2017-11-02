@@ -82,7 +82,7 @@ function loadParams(){
   console.log(jobTitle);
   let state = $("#location :selected").val();
   let obj = {}
-  if(jobTitle && state){
+  if(jobTitle && state !== "0"){
     obj.state = state;
     obj.jobTitle = jobTitle;
   }else if (jobTitle) {

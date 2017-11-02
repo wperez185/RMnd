@@ -27,7 +27,8 @@ router.post('/filters', jsonParser, (req, res) => {
   let filters = {};
   console.log(req.body);
   if(req.body.jobTitle){
-     filters.jobTitle = { "$regex": req.body.jobTitle, "$options": "i" };
+    var regex = new RegExp(["^", req.body.jobTitle, "$"].join(""), "i");
+     filters.jobTitle = regex;
   }
   if(req.body.state){
      filters.state = req.body.state;
@@ -38,10 +39,11 @@ router.post('/filters', jsonParser, (req, res) => {
   if(req.body.zipcode){
     filters.zipcode = req.body.zipcode;
   }
-
+  console.log(filters);
   jobPosts
     .find(filters)
     .then(posts => {
+      console.log(posts);
       res.json(posts)
     })
     .catch(
