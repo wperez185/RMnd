@@ -9,6 +9,11 @@ function requiredLogin(req, res, next){
     next();
   }
 }
+router.get('/logout', function(req, res) {
+ req.session.authenticated = false
+ req.session.destroy();
+ return res.redirect('/')
+})
 
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../..", "public/index.html"))

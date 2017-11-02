@@ -25,6 +25,12 @@ $(function(){
        }
      })
   }
+  $(".right").click(function(event){
+    event.preventDefault();
+    localStorage.removeItem("RMnd-user");
+    window.location.href = "/logout";
+  })
+
   $("#profile-form").submit(function(event){
     event.preventDefault();
     let userId = localStorage.getItem("RMnd-user");
