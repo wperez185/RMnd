@@ -43,7 +43,6 @@ router.post('/filters', jsonParser, (req, res) => {
   jobPosts
     .find(filters)
     .then(posts => {
-      console.log(posts);
       res.json(posts)
     })
     .catch(

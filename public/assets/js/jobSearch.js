@@ -48,12 +48,13 @@ function loadData(data){
 
 function loadParams(){
   const jobTitle = getUrlVars()["jobTitle"];
-  const state = getUrlVars()["state"];
+  const state = getUrlVars()["location"];
   console.log('test');
-  // if(jobTitle && state){
+  if(state){
     let obj = {
       state
     };
+    console.log(obj);
     $.ajax({
       url: `/api/jobSearch/filters`,
       contentType: 'application/json',
@@ -72,7 +73,7 @@ function loadParams(){
         console.log(err);
       }
     })
- // }
+ }
   }
   loadParams();
 
