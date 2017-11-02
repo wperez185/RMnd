@@ -25,6 +25,7 @@ function loadData(data){
   });
   const jobData = data.length;
   console.log(jobData);
+  $(".num-jobs").html(jobData + " " + "Jobs Found");
   const jobsPerPage = 10;
   let numPages = Math.ceil(data.length / jobsPerPage);
   let newPagination = '';
