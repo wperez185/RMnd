@@ -1154,9 +1154,15 @@ dl {
   background: #ebebea;
   margin-top: 50px;
 }
+p.disclaimer-header {
+  font-weight: bold;
+  font-size: 17px;
+}
 .disclaimer {
   border: 2px solid #000;
   width: 73%;
+  background-color: #333;
+  color: #fff;
   margin-top: 10px;
   text-align: center;
   padding: 5px;
