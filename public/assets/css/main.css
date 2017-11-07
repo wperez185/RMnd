@@ -71,9 +71,6 @@ a.btn.btn-lg.right:hover {
   font-size: 15px;
   font-weight: 600;
 }
-.hide {
-  display: none;
-}
 
 .margin-left {
   margin-left: 20px;
@@ -434,7 +431,7 @@ ul.job-post {
   overflow: hidden;
   width: 100%;
   margin-top: 40px;
-  display: flex;
+  display: block;
 }
 
 /* Style the links inside the navigation bar */
@@ -1088,6 +1085,18 @@ dl {
 
 /********************************************************************************************/
 
+p.disclaimer-header {
+  font-weight: bold;
+  font-size: 17px;
+}
+.disclaimer {
+  border: 2px solid #000;
+  background-color: #333;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+}
 .hide {
   display: none;
 }
@@ -1154,19 +1163,6 @@ dl {
   background: #ebebea;
   margin-top: 50px;
 }
-p.disclaimer-header {
-  font-weight: bold;
-  font-size: 17px;
-}
-.disclaimer {
-  border: 2px solid #000;
-  width: 73%;
-  background-color: #333;
-  color: #fff;
-  margin-top: 10px;
-  text-align: center;
-  padding: 5px;
-}
 #job-list {
   background: #fff;
 }
@@ -1207,6 +1203,9 @@ p.disclaimer-header {
 .hide {
   display: inline-block;
 }
+.disclaimer {
+  width: 73%;
+}
 .data-btn {
   display: none;
 }
@@ -1223,6 +1222,9 @@ p.disclaimer-header {
 @media (min-width: 921px) and (max-width : 1200px){
 .hide {
   display: inline-block;
+}
+.disclaimer {
+  width: 73%;
 }
 .data-btn {
   display: none;
@@ -1241,6 +1243,9 @@ p.disclaimer-header {
 .hide {
   display: inline-block;
   margin-left: 13px;
+}
+.disclaimer {
+  width: 73%;
 }
 .data-btn {
   display: none;
