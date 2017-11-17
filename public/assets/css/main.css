@@ -290,7 +290,7 @@ ul.job-post {
 .main h1 {
   position: relative;
   padding-bottom: 15px;
-  color: #fff;
+  color: #333;
   font-size: 30px;
   font-weight: 700;
   text-align: center;
@@ -314,7 +314,7 @@ ul.job-post {
 /* Subheading Styles */
 .text {
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 @media (min-width: 921px) and (max-width : 1200px) {
 .text {
