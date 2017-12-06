@@ -4,8 +4,20 @@ const jsonParser = bodyParser.json();
 const express = require("express");
 const router = express.Router();
 const moment = require('moment');
-
-
+const faker = require('faker');
+function generateFakeDate(filters){
+  return {
+    city:'',
+    state: filters.state,
+    jobTitle: faker.name.jobTitle(),
+    description: "We are looking for a " + faker.name.jobTitle(),
+    jobType: ["full-time", "part-time"][Math.floor(Math.random() * 2)],
+    postedDate: moment(new Date()).format("DD-MM-YYYY"),
+    salary: [40000, 45000, 50000, 60000, 70000, 80000][Math.floor(Math.random() * 6)],
+    zipcode: '',
+    _id: ''
+  };
+}
 router.get('/', (req, res) => {
   jobPosts
     .find()
@@ -22,7 +34,6 @@ router.get('/', (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
-
 router.post('/filters', jsonParser, (req, res) => {
   let filters = {};
   console.log(req.body);
@@ -39,10 +50,15 @@ router.post('/filters', jsonParser, (req, res) => {
   if(req.body.zipcode){
     filters.zipcode = req.body.zipcode;
   }
-  console.log(filters);
+//  console.log(filters);
   jobPosts
     .find(filters)
     .then(posts => {
+      posts.push(generateFakeDate(filters));
+      posts.push(generateFakeDate(filters));
+      posts.push(generateFakeDate(filters));
+      posts.push(generateFakeDate(filters));
+      posts.push(generateFakeDate(filters));
       res.json(posts)
     })
     .catch(
@@ -51,7 +67,6 @@ router.post('/filters', jsonParser, (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
-
 router.post("/", jsonParser, (req, res) => {
   // ensure `name` and `budget` are in request body
   const requiredFields = ['jobTitle', 'description', 'city', 'state', 'zipcode', 'salary'];
@@ -81,7 +96,6 @@ router.post("/", jsonParser, (req, res) => {
       res.status(500).json({message: 'Internal server error'});
     });
 });
-
 router.delete('/:id', (req, res) => {
   jobPosts
     .findByIdAndRemove(req.params.id)
@@ -94,7 +108,6 @@ router.delete('/:id', (req, res) => {
       res.status(500).json({error: 'something went terribly wrong'});
     });
 });
-
 router.put('/:id', jsonParser, (req, res) => {
   const requiredFields = ['jobTitle', 'description', 'city', 'state', 'zipcode'];
   for (let i = 0; i < requiredFields.length; i++) {
@@ -122,5 +135,4 @@ router.put('/:id', jsonParser, (req, res) => {
   .then(jobPosts => res.status(204).end())
   .catch(err => res.status(500).json({message: 'Internal server error'}));
 });
-
 module.exports = router;
